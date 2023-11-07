@@ -1,0 +1,213 @@
+.popup-fade {
+   display: block;
+}
+.popup-fade:before {
+   content: '';
+   background: #000;
+   position: fixed;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+   opacity: 0.7;
+   z-index: 9999;
+}
+.popup {
+   position: fixed;
+   left: 50%;
+   top: 50%;
+   transform: translate(-52%, -50%);
+   width: 400px;
+   height: 499px;
+   background: url('img/bg.png') no-repeat;
+   background-size: cover;
+   border: 1px solid #000;
+   border-radius: 4px;
+   z-index: 99999;
+   opacity: 1;
+   margin-left: 10px;
+}
+.popup-close {
+   background: #606061;
+   color: #ffffff;
+   line-height: 25px;
+   position: absolute;
+   right: -12px;
+   text-align: center;
+   top: -10px;
+   width: 24px;
+   text-decoration: none;
+   font-weight: bold;
+   -webkit-border-radius: 12px;
+   -moz-border-radius: 12px;
+   border-radius: 12px;
+   -moz-box-shadow: 1px 1px 3px #000;
+   -webkit-box-shadow: 1px 1px 3px #000;
+   box-shadow: 1px 1px 3px #000;
+   cursor: pointer;
+}
+.modal-dialog-me {
+   position: relative;
+   width: auto;
+
+   text-align: center;
+   padding-bottom: 20px;
+   padding-top: 0px;
+}
+.modal-dialog-me h1 {
+   color: #fff;
+   font-family: Raleway, Geneva, Arial, Helvetica;
+   font-size: 20px;
+   font-weight: bold;
+   padding: 0 20px;
+}
+.flexrow {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   align-items: flex-end;
+   margin: 15px auto;
+   padding: 0 5px;
+}
+
+.modal-content {
+   color: #fff;
+   font-family: Raleway, Geneva, Arial, Helvetica;
+   font-size: 16px;
+   font-weight: 600;
+}
+.modal-content p {
+   color: #fff;
+   font-size: 1.1em;
+   line-height: 1.2em;
+   font-weight: bold;
+   margin-top: 40px;
+}
+.modal-content span {
+   border-bottom: 1px solid #fff;
+   padding-bottom: 1px;
+}
+
+.my-cool-form {
+   padding-top: 30px;
+}
+.cool-form-field {
+   display: block;
+   margin: 0 auto 15px;
+   padding: 0 35px;
+   width: 300px;
+   height: 40px;
+   border: 1px solid black;
+   -webkit-border-radius: 3px;
+   -moz-border-radius: 3px;
+   border-radius: 3px;
+   background: #fff;
+   font-family: Raleway, Geneva, Arial, Helvetica;
+   font-weight: 400;
+   font-size: 16px;
+   color: #333;
+   outline: none;
+}
+.field-fio {
+   background-image: url('img/offer__name_icon.png');
+   background-position: 20px center;
+   background-repeat: no-repeat;
+   padding: 0 20px 0 70px;
+}
+.field-tel {
+   background-image: url('img/offer__phone_icon.png');
+   background-position: 17px center;
+   background-repeat: no-repeat;
+   padding: 0 20px 0 70px;
+}
+.cool-form-field:focus {
+   border-color: #999;
+}
+.cool-form-button {
+   margin-top: 0px;
+   cursor: pointer;
+   width: 250px;
+   height: 50px;
+   -webkit-border-radius: 7px;
+   -moz-border-radius: 7px;
+   border-radius: 7px;
+   font-family: Raleway, Geneva, Arial, Helvetica;
+   color: #fff;
+   font-size: 20px;
+   font-weight: 700;
+   background: rgb(100, 228, 107);
+   background: -moz-linear-gradient(
+      180deg,
+      rgba(100, 228, 107, 1) 0%,
+      rgba(79, 200, 63, 1) 63%,
+      rgba(60, 174, 23, 1) 100%
+   );
+   background: -webkit-linear-gradient(
+      180deg,
+      rgba(100, 228, 107, 1) 0%,
+      rgba(79, 200, 63, 1) 63%,
+      rgba(60, 174, 23, 1) 100%
+   );
+   background: linear-gradient(180deg, rgba(100, 228, 107, 1) 0%, rgba(79, 200, 63, 1) 63%, rgba(60, 174, 23, 1) 100%);
+   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#64e46b",endColorstr="#3cae17",GradientType=1);
+}
+
+.cool-form-button:active {
+   width: 250px;
+   height: 50px;
+   box-shadow: 0 0 hsl(5, 60%, 60%);
+   border: 3px solid hsl(5, 40%, 70%);
+   background: rgb(85, 196, 91);
+   background: -moz-linear-gradient(
+      180deg,
+      rgba(85, 196, 91, 1) 0%,
+      rgba(62, 157, 49, 1) 63%,
+      rgba(30, 89, 10, 1) 100%
+   );
+   background: -webkit-linear-gradient(
+      180deg,
+      rgba(85, 196, 91, 1) 0%,
+      rgba(62, 157, 49, 1) 63%,
+      rgba(30, 89, 10, 1) 100%
+   );
+   background: linear-gradient(180deg, rgba(85, 196, 91, 1) 0%, rgba(62, 157, 49, 1) 63%, rgba(30, 89, 10, 1) 100%);
+   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#55c45b",endColorstr="#1e590a",GradientType=1);
+}
+
+.replace {
+   position: relative;
+   width: auto;
+   margin: 10px;
+   text-align: center;
+   padding-bottom: 20px;
+   text-align: center;
+   color: #fff;
+   font-family: Raleway, Geneva, Arial, Helvetica;
+   font-size: 16px;
+   font-weight: 400;
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+}
+.replace h1 {
+   color: #fff;
+   font-family: Raleway, Geneva, Arial, Helvetica;
+   font-size: 20px;
+   font-weight: 600;
+   margin-bottom: 5px;
+}
+.replace p {
+   padding: 5px 0;
+   line-height: 1.2em;
+}
+.replace b {
+   color: #fff;
+   font-family: Raleway, Geneva, Arial, Helvetica;
+   font-size: 20px;
+   font-weight: bold;
+   margin-bottom: 5px;
+}
+.replace .thank {
+   width: 45%;
+   margin: auto;
+}
