@@ -1,9 +1,13 @@
-$(document).ready(function() {
-	
-	$("a[href^='#']").click(function(){
-		var _href = $(this).attr("href");
-		$("html, body").animate({scrollTop: $(_href).offset().top+"px"});
-		return false;
-	});
+let topButton = document.querySelector('.top-btn');
 
-});
+function scrollFunction() {
+   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      topButton.style.display = 'block';
+   } else {
+      topButton.style.display = 'none';
+   }
+}
+
+window.onscroll = function () {
+   scrollFunction();
+};
