@@ -1,6 +1,7 @@
 .popup-fade {
    display: block;
 }
+
 .popup-fade:before {
    content: '';
    background: #000;
