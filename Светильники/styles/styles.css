@@ -161,11 +161,18 @@ h2.title {
    line-height: 36px;
    text-align: center;
 }
+
 h2.title > span {
    color: var(--color);
 }
 
 /* header */
+
+.offer_section.offer3 .title_block.black {
+   display: none;
+   background-color: var(--text-dark);
+   color: silver;
+}
 
 .offer_section {
    padding: 0 0 30px;
