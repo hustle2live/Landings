@@ -8,13 +8,17 @@
    --color: #149cc7;
 
    --fire-orange: linear-gradient(90deg, rgba(233, 227, 6, 1) 16%, rgba(255, 132, 0, 1) 100%);
-   --fire-red: linear-gradient(90deg, rgb(197, 137, 237) 0%, rgb(255, 98, 98) 50%, rgb(252, 243, 69) 100%);
+   /* --fire-red: linear-gradient(90deg, rgb(197, 137, 237) 0%, rgb(255, 98, 98) 50%, rgb(252, 243, 69) 100%); */
+
+   /* --fire-red: linear-gradient(90deg, rgb(197, 137, 237) 0%, rgb(255, 98, 98) 50%, rgb(252, 243, 69) 100%); */
+   --fire-red: linear-gradient(270deg, rgba(233, 227, 6, 1) 16%, rgba(110, 57, 6, 1) 60%, rgba(182, 182, 182, 1) 100%);
 }
 
 /* styles */
 
 body {
    min-width: 480px;
+   /* background-color: var(--color); */
    background: var(--dark);
    font-family: 'AvenirNextCyr', sans-serif;
    font-weight: 400;
@@ -22,6 +26,9 @@ body {
    line-height: 24px;
    color: var(--dark);
    cursor: default;
+   background-image: url('../images/wardrobe-lighting.webp');
+   background-size: contain;
+   background-blend-mode: overlay;
 }
 
 .main_wrapper {
@@ -107,12 +114,17 @@ b {
    opacity: 0.92;
 }
 
+.button:active {
+   box-shadow: 0px 0px 13px 3px #000;
+}
+
 .button:hover .button-hover {
    transform: translateY(0);
 }
 
 .button:hover span {
    color: var(--dark);
+   color: lightgoldenrodyellow;
 }
 
 /* titles */
