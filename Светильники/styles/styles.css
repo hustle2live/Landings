@@ -149,7 +149,7 @@ b {
 
 .button:hover span {
    color: var(--dark);
-   color: lightgoldenrodyellow;
+   color: rgba(250, 250, 210, 0.766);
 }
 
 /* titles */
