@@ -1240,6 +1240,7 @@ section .list4 {
    min-height: 150px;
    height: 150px;
    position: relative;
+   padding: 25px 0;
 }
 
 .benefits_list3 .benefit_item:last-child {
@@ -1257,7 +1258,7 @@ section .list4 {
    position: absolute;
    top: 35%;
    margin-top: -75px;
-   right: 0;
+   right: -10px;
 }
 
 .dark_theme .benefits_list3 .benefit_item img {
@@ -1267,7 +1268,7 @@ section .list4 {
 
 .benefits_list3 .benefit_item:nth-child(even) img {
    right: auto;
-   left: 0;
+   left: -10px;
 }
 
 .benefits_list3 .benefit_item .text_block {
