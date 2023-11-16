@@ -67,6 +67,16 @@ b {
    transition: height 0.3s ease-in-out;
 }
 
+/* .offer_section.offer3 .title_block.black {
+   background: var(--dark);
+   color: var(--bg-secondary);
+} */
+
+.black {
+   background: var(--dark) !important;
+   color: var(--bg-secondary) !important;
+}
+
 /* button */
 
 .top-btn {
@@ -167,12 +177,6 @@ h2.title > span {
 }
 
 /* header */
-
-.offer_section.offer3 .title_block.black {
-   display: none;
-   background-color: var(--text-dark);
-   color: silver;
-}
 
 .offer_section {
    padding: 0 0 30px;
@@ -919,6 +923,11 @@ select {
    background-color: #000;
    overflow: hidden;
    position: relative;
+}
+
+.video_block .video {
+   width: 100%;
+   height: auto;
 }
 
 .video_block iframe,
