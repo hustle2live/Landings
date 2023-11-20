@@ -70,7 +70,18 @@ b {
    color: var(--bg-secondary) !important;
 }
 
+.bg-red {
+   background: red;
+   color: white;
+}
+
 /* button */
+
+.photo {
+   height: 250px;
+   width: 100%;
+   object-fit: cover;
+}
 
 .top-btn {
    display: none;
@@ -152,7 +163,6 @@ b {
 
 .button:hover span {
    color: var(--dark);
-   color: rgba(250, 250, 210, 0.766);
 }
 
 /* titles */
@@ -318,6 +328,16 @@ h2.title > span {
    color: var(--light);
 }
 
+.benefit_item h2,
+.benefit_item p {
+   max-width: 90%;
+   margin: auto;
+}
+
+.benefit_item p {
+   max-width: 84%;
+}
+
 .offer_section.offer3 .benefits_list .benefit_item {
    float: left;
    padding: 0 0 0 44px;
@@ -352,15 +372,21 @@ h2.title > span {
 
 .offer_section.offer3 .benefits_list .benefit_item:nth-child(2):before {
    background-image: url('../images/svg/deadline-svgrepo-com.svg');
+   width: 32px;
 }
 
 .offer_section.offer3 .benefits_list .benefit_item:nth-child(3):before {
    background-image: url('../images/svg/payment-ecommerce-guarantee-safe-svgrepo-com.svg');
 }
 
+.offer_section.offer3 .benefits_list .benefit_item:nth-child(3) {
+   margin-left: -10px;
+}
+
 .products_count {
-   margin: 20px 0 0;
+   margin: 20px auto 0;
    text-align: center;
+   max-width: 80%;
 }
 
 .products_count span {
@@ -715,7 +741,7 @@ img.image {
 }
 
 .reviews4_section .reviews_stats_block .line:before {
-   background: #ffd800;
+   background: #00ff33;
 }
 
 .reviews_list4 .review_item {
@@ -763,41 +789,39 @@ img.image {
 }
 
 .order_info_list2 .info_item {
-   display: table;
+   display: flex;
+   gap: 20px;
+   padding: 10px 20px;
    width: 100%;
    height: 204px;
    border-top: 4px solid #d9d9d9;
-   position: relative;
-}
-
-.order_info_list2 .info_item img {
-   display: block;
-   width: 220px;
-   position: absolute;
-   top: 0;
-   right: 0;
-}
-
-.order_info_list2 .info_item:nth-child(even) img {
-   right: auto;
-   left: 0;
 }
 
 .order_info_list2 .info_item .text_block {
-   display: table-cell;
-   vertical-align: middle;
-   padding: 0 240px 0 20px;
-   text-align: center;
+   width: 55%;
 }
 
-.order_info_list2 .info_item:nth-child(even) .text_block {
-   padding: 0 20px 0 240px;
+.order_info_list2 .info_item img {
+   width: 45%;
+}
+
+.order_info_list2 .info_item .text_block {
+   text-align: center;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+}
+
+.order_info_list2 .info_item:nth-child(odd) {
+   flex-direction: row-reverse;
 }
 
 .order_info_list2 .info_item h4 {
    margin: 0 0 5px;
    font-weight: 700;
    color: var(--color);
+   font-size: 1.2rem;
 }
 
 /* footer */
