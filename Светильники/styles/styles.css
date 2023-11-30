@@ -164,6 +164,18 @@ b {
    color: var(--dark);
 }
 
+.hidden {
+   transition-duration: 1s;
+   visibility: hidden;
+}
+
+.button.disabled span,
+.button.disabled .button-hover,
+.button.disabled {
+   background: var(--text-dark);
+   color: #7f7f7f;
+}
+
 /* titles */
 
 h3.title {
@@ -939,4 +951,13 @@ section.s2 .title span {
    font-size: 1.3em;
    margin: 20px auto;
    font-weight: bold;
+}
+
+.form-message {
+   min-height: 20px;
+   height: 20px;
+   margin: 12px 0;
+   text-align: center;
+   color: green;
+   font-weight: 500;
 }
