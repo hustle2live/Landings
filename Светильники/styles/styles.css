@@ -108,11 +108,7 @@ b {
    background-color: #555;
 }
 
-.div-form-submit {
-   position: relative;
-}
 
-.div-form-submit,
 .button-hover,
 .button {
    position: relative;
@@ -153,8 +149,8 @@ b {
    background: var(--fire-red);
    transform: translateY(100%);
    border-radius: 6px;
-   z-index: 1;
    opacity: 0.92;
+   z-index: 1;
 }
 
 .button:active {
