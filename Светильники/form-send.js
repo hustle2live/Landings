@@ -59,6 +59,8 @@ const postFeedback = async (TOKEN, DATA, METHOD_NAME = `sendMessage`) => {
 
 const onFormSubmit = (e) => {
    e.preventDefault();
+
+   console.log(e.target);
    const formData = new FormData(formOrder);
 
    const formValues = {
@@ -103,7 +105,7 @@ const hadleSubmit = (formData) => {
    return new Promise(function (resolve, reject) {
       postFeedback(bot_token, formData)
          .then((data) => {
-            onSuccess();
+            resolve(onSuccess());
          })
          .catch((error) => {
             onError();

@@ -108,7 +108,6 @@ b {
    background-color: #555;
 }
 
-
 .button-hover,
 .button {
    position: relative;
@@ -139,6 +138,8 @@ b {
    position: relative;
    z-index: 2;
    color: var(--text-dark);
+   height: 100%;
+   display: block;
 }
 
 .button-hover {
