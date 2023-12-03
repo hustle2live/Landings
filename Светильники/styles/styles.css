@@ -108,6 +108,10 @@ b {
    background-color: #555;
 }
 
+.div-form-submit {
+   position: relative;
+}
+
 .div-form-submit,
 .button-hover,
 .button {
