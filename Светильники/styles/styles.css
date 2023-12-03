@@ -1,34 +1,49 @@
 :root {
    --bg-primary: #1dbda8;
    --bg-secondary: #edf0f5;
-
    --light: #fff;
    --text-dark: #4c4c4c;
    --dark: #1c1c1c;
    --color: #149cc7;
-
    --fire-orange: linear-gradient(90deg, rgba(233, 227, 6, 1) 16%, rgba(255, 132, 0, 1) 100%);
-   /* --fire-orange: linear-gradient(90deg, rgb(197, 137, 237) 0%, rgb(255, 98, 98) 50%, rgb(252, 243, 69) 100%); */
-
    --fire-red: linear-gradient(270deg, rgba(233, 227, 6, 1) 16%, rgba(110, 57, 6, 1) 60%, rgba(182, 182, 182, 1) 100%);
-   /* --fire-red: linear-gradient(90deg, rgb(197, 137, 237) 0%, rgb(255, 98, 98) 50%, rgb(252, 243, 69) 100%); */
 }
 
 /* styles */
 
+body,
+a,
+p,
+div,
+section,
+button {
+   font-family: 'Plus Jakarta Sans', sans-serif;
+   font-weight: 400;
+   font-style: normal;
+   font-size: 16px;
+}
+
 body {
+   line-height: 24px;
    min-width: 480px;
    background: var(--dark);
-   font-family: 'AvenirNextCyr', sans-serif;
-   font-weight: 400;
-   font-size: 16px;
-   line-height: 24px;
+   min-width: 480px;
+   background: var(--dark);
    color: var(--text-dark);
    cursor: default;
    background-image: url('../images/wardrobe-lighting.webp');
    background-size: contain;
    background-blend-mode: overlay;
 }
+
+/*
+   font-family: 'Open Sans', sans-serif;
+   font-family: 'Plus Jakarta Sans', sans-serif;
+   font-family: 'Shantell Sans', cursive;
+   font-weight: 400;
+   font-style: normal;
+   font-size: 16px;
+} */
 
 .main_wrapper {
    margin: 0 auto;
@@ -120,8 +135,9 @@ b {
    -moz-border-radius: 4px;
    border-radius: 4px;
    background: var(--fire-orange);
-   font-family: 'AvenirNextCyr', sans-serif;
-   font-weight: 700;
+   font-family: 'Plus Jakarta Sans', sans-serif;
+   font-weight: 600;
+   font-style: normal;
    font-size: 24px;
    line-height: 80px;
    letter-spacing: 2px;
@@ -442,8 +458,9 @@ h3.title,
    -moz-border-radius: 4px;
    border-radius: 4px;
    background-color: #f5f5f5;
-   font-family: 'AvenirNextCyr', sans-serif;
+   font-family: 'Open Sans', sans-serif;
    font-weight: 400;
+   font-style: normal;
    font-size: 16px;
    color: #333;
 }
@@ -470,7 +487,7 @@ h3.title,
    -moz-border-radius: 4px;
    border-radius: 4px;
    background-color: #f5f5f5;
-   font-family: 'AvenirNextCyr', sans-serif;
+   font-family: 'Plus Jakarta Sans', sans-serif;
    font-weight: 400;
    font-size: 16px;
    color: #333;
