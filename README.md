@@ -1,4 +1,4 @@
-There are some Landing Page developed with `HTML5, CSS3, SCSS, Gulp` : 
+There are some Landing Pages developed with `HTML5, CSS3, SCSS, Gulp` : 
 
 
 1. [Space Research center ](https://hustle2live.github.io/Landings/space)(responsive)
