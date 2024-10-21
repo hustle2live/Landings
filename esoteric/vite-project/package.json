@@ -1,0 +1,25 @@
+{
+  "name": "vite-project",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "npm run build-css && vite build",
+    "preview": "vite preview",
+    "build-css": "sass --load-path=node_modules src:dist --style=compressed",
+    "watch-css": "npm run build-css && sass --load-path=node_modules -w src:dist --style=compressed"
+  },
+  "devDependencies": {
+    "sass": "^1.80.3",
+    "vite": "^5.4.8"
+  },
+  "dependencies": {
+    "vanilla-framework": "^4.17.1"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}

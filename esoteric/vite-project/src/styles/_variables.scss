@@ -1,0 +1,22 @@
+$bg-light: #dddddd;
+$bg-dark: #383838;
+
+$primary-color-light: #c6538c;
+$primary-color-dark: #fffafc;
+$font-primary: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+
+:root {
+   font-family: $font-primary;
+   line-height: 1.5;
+   font-weight: 400;
+
+   color-scheme: light dark;
+
+   $text-color: light-dark($primary-color-light, $primary-color-dark);
+   $background-color: light-dark($bg-light, $bg-dark);
+
+   font-synthesis: none;
+   text-rendering: optimizeLegibility;
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+}
