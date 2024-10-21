@@ -8,3 +8,6 @@ There are some Landing Pages developed with `HTML5, CSS3, SCSS, Gulp` :
 3. [IPTV Services ](https://hustle2live.github.io/Landings/cinema)(mobile) 
 
 4. [Catadamy ](https://cat-landing.netlify.app/)(responsive) | 
+
+
+5. [Workshop intensive ](https://hustle2live.github.io/Landings/esoteric/dist/)(`in-progress`)
