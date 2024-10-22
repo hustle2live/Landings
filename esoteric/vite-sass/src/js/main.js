@@ -1,8 +1,8 @@
 import '../scss/style.scss';
 
-const counterDiv = document.querySelector('.counter');
-const sassButton = document.querySelector('.sass-btn');
+const changeThemeButton = document.querySelector('.toggle_theme-btn');
+const htmlElement = document.querySelector('html');
 
-sassButton.addEventListener('click', () => {
-   counterDiv.innerText = Number(counterDiv.innerHTML) + 1;
+changeThemeButton.addEventListener('click', () => {
+   htmlElement.classList.toggle('dark');
 });
