@@ -1,5 +1,3 @@
-@use 'sass:color';
-
 .container {
 }
 
@@ -8,6 +6,7 @@
    align-items: stretch;
    justify-content: space-between;
    flex-flow: column wrap;
+   position: relative;
 
    &__title {
       font-weight: 400;
@@ -28,11 +27,18 @@
 }
 
 .header {
-   position: relative;
    height: 200vw;
+   position: relative;
+   background-image: url('../../images/background/ai-generated-8965879_1280.webp');
+   background-size: cover;
    background-color: var(--surface);
-   //    background-image: url('../../images/background/abstract-4319066_640.webp');
-   //    background-size: cover;
+   background-position: center center;
+   color: var(--on-tertiary);
+   z-index: 0;
+
+   //    background: transparent;
+   //    backdrop-filter: blur(10px);
+   //    backdrop-filter: invert(80%);
 
    &__main,
    &__cta,
@@ -55,12 +61,18 @@
    &__description {
       width: 100%;
    }
+
    &__description {
-      font-size: 4rem;
+      font-size: 2.4rem;
+      margin-top: 2.4rem;
+      font-family: 'Caveat', cursive;
+      color: var(--primary);
    }
+
    &__content {
       margin: 0 2rem 5rem;
    }
+
    &__main {
       gap: 1.6rem;
       margin-bottom: 4rem;
@@ -79,8 +91,8 @@
       padding: 1rem 4rem;
       border-radius: 1.6rem;
       margin: 0 auto;
-      border: 2px solid var(--primary);
-      background-color: var(--on-primary);
+      color: var(--on-primary);
+      background-color: var(--primary);
    }
 
    &__button-strike {
@@ -98,18 +110,23 @@
    &__timer {
       font-size: 2.25rem;
    }
-
    &__bg-shadow {
       position: absolute;
+      content: '';
+      display: block;
       left: 0;
       top: 0;
       width: 100%;
       height: 100%;
-      content: '';
-      display: block;
       background: var(--shadow);
-      background: linear-gradient(0deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0) 100%);
-      z-index: 0;
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0) 100%);
+      //   background: linear-gradient(
+      //      0deg,
+      //      rgba(255, 255, 255, 0.8) 0%,
+      //      rgba(255, 255, 255, 0.8) 50%,
+      //      rgba(255, 255, 255, 0) 100%
+      //   );
+      z-index: -1;
    }
 }
 

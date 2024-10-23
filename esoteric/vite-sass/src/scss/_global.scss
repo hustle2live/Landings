@@ -21,7 +21,7 @@ html {
 body {
    font-family: 'Montserrat';
    background: var(--surface-container-lowest);
-   color: var(--primary);
+   color: var(--tertiary);
    font-size: 2.4rem;
    transition: background 0.2s ease, color 0.2s ease;
 }
@@ -38,7 +38,7 @@ a,
 }
 
 .inclined {
-   transform: rotate(5deg);
+   transform: rotate(-5deg);
 }
 
 h1,
