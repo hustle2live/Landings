@@ -1,0 +1,129 @@
+@use 'sass:color';
+
+.container {
+}
+
+.section {
+   display: flex;
+   align-items: stretch;
+   justify-content: space-between;
+   flex-flow: column wrap;
+
+   &__title {
+      font-weight: 400;
+
+      &_title {
+      }
+      &_description {
+      }
+   }
+
+   &__content {
+   }
+
+   &__conclusion {
+   }
+   &__background {
+   }
+}
+
+.header {
+   position: relative;
+   height: 200vw;
+   background-color: var(--surface);
+   //    background-image: url('../../images/background/abstract-4319066_640.webp');
+   //    background-size: cover;
+
+   &__main,
+   &__cta,
+   &__content,
+   &__info {
+      display: flex;
+      flex-direction: column;
+      gap: 1.4rem;
+   }
+
+   &__info {
+      margin-top: 3rem;
+   }
+
+   &__start-date {
+      text-transform: uppercase;
+   }
+
+   &__start-date,
+   &__description {
+      width: 100%;
+   }
+   &__description {
+      font-size: 4rem;
+   }
+   &__content {
+      margin: 0 2rem 5rem;
+   }
+   &__main {
+      gap: 1.6rem;
+      margin-bottom: 4rem;
+   }
+
+   &__title {
+      font-size: 1.625rem;
+      text-transform: uppercase;
+   }
+
+   &__subtitle {
+      font-size: 1.75rem;
+   }
+
+   &__button {
+      padding: 1rem 4rem;
+      border-radius: 1.6rem;
+      margin: 0 auto;
+      border: 2px solid var(--primary);
+      background-color: var(--on-primary);
+   }
+
+   &__button-strike {
+      text-decoration: line-through;
+   }
+
+   &__cta {
+      justify-self: flex-end;
+   }
+
+   &__time-left {
+      font-size: 1.75rem;
+   }
+
+   &__timer {
+      font-size: 2.25rem;
+   }
+
+   &__bg-shadow {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      content: '';
+      display: block;
+      background: var(--shadow);
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0) 100%);
+      z-index: 0;
+   }
+}
+
+.info {
+}
+
+.button_primary {
+}
+
+.timer {
+}
+
+.testimonials {
+}
+
+.testimonials__content {
+}

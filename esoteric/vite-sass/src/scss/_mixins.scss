@@ -1,11 +1,21 @@
 @mixin viewport-md {
-  @media (min-width: 767px) {
-    @content;
-  }
+   @media (min-width: 464px) {
+      @content;
+   }
+}
+@mixin viewport-lg {
+   @media (min-width: 767px) {
+      @content;
+   }
+}
+@mixin viewport-xl {
+   @media (min-width: 1023px) {
+      @content;
+   }
 }
 
 @mixin text-gradient {
-	background: var(--hero-name-background);
-	background-clip: text;
-	color: transparent;
+   background: var(--hero-name-background);
+   background-clip: text;
+   color: transparent;
 }

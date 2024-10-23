@@ -6,6 +6,12 @@ html {
    @include mixins.viewport-md {
       font-size: 10px;
    }
+   @include mixins.viewport-lg {
+      font-size: 14px;
+   }
+   @include mixins.viewport-xl {
+      font-size: 16px;
+   }
 }
 
 .dark {
@@ -20,34 +26,40 @@ body {
    transition: background 0.2s ease, color 0.2s ease;
 }
 
-
-
 .container {
    margin: 0;
 }
 
 p,
+button,
+a,
 .text {
-   font-size: 2.4rem;
+   font-size: 1.5rem;
+}
+
+.inclined {
+   transform: rotate(5deg);
 }
 
 h1,
 h2,
 h3,
 .title {
-   font-size: 4rem;
+   font-family: 'Montserrat';
+   font-size: 3rem;
+   font-weight: 600;
 }
 
 h4,
 h5,
 h6,
 .subtitle {
-   font-size: 3rem;
+   font-size: 2.4rem;
 }
 
 .footer {
    padding: 3rem 0;
-   font-size: 1.6rem;
+   font-size: 1.5rem;
 
    a {
       text-decoration: none;

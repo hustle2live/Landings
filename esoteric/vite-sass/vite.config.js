@@ -11,27 +11,6 @@ import { fileURLToPath } from 'url';
 import { ViteImageOptimizer } from 'vite-plugin-image-optimizer';
 
 export default defineConfig({
-   root: 'src',
-   base: '',
-   build: {
-      minify: false, // disable minification
-      rollupOptions: {
-         input: Object.fromEntries(
-            glob
-               .sync(['./src/*.html', './src/pages/**/*.html'])
-               .map((file) => [
-                  path.relative(__dirname, file.slice(0, file.length - path.extname(file).length)),
-                  fileURLToPath(new URL(file, import.meta.url))
-               ])
-         ),
-         // output unminified CSS file
-         output: {
-            assetFileNames: 'assets/[name].[ext]'
-         }
-      },
-      outDir: '../dist',
-      emptyOutDir: true
-   },
    plugins: [
       injectHTML(),
       FullReload(['./src/**/**.html']),
@@ -53,5 +32,26 @@ export default defineConfig({
          }),
          apply: 'serve'
       }
-   ]
+   ],
+   root: 'src',
+   base: '',
+   build: {
+      minify: false, // disable minification
+      rollupOptions: {
+         input: Object.fromEntries(
+            glob
+               .sync(['./src/*.html', './src/pages/**/*.html'])
+               .map((file) => [
+                  path.relative(__dirname, file.slice(0, file.length - path.extname(file).length)),
+                  fileURLToPath(new URL(file, import.meta.url))
+               ])
+         ),
+         // output unminified CSS file
+         output: {
+            assetFileNames: 'assets/[name].[ext]'
+         }
+      },
+      outDir: '../dist',
+      emptyOutDir: true
+   }
 });

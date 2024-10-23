@@ -8,9 +8,9 @@
    flex-flow: column;
    position: relative;
 
-   overflow-y: scroll;
-   scroll-snap-type: y mandatory;
-   -ms-scroll-snap-type: y mandatory;
+   // overflow-y: scroll;
+   // scroll-snap-type: y mandatory;
+   // -ms-scroll-snap-type: y mandatory;
 
    &-logo {
       width: 300px;
