@@ -35,6 +35,9 @@
    }
 
    &__content {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
    }
 
    &__conclusion {
@@ -157,4 +160,97 @@
 }
 
 .testimonials__content {
+}
+
+.benefits {
+   &__list {
+      display: flex;
+      flex-flow: column wrap;
+      gap: 1rem;
+      margin-top: 3rem;
+   }
+
+   &__item {
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+
+      box-shadow: 0 0 1rem 0rem var(--primary);
+
+      text-align: left;
+      background: var(--surface);
+      color: var(--on-surface);
+      width: 230px;
+      height: auto;
+
+      padding: 1.4rem;
+      padding-bottom: 3.75rem;
+      border-radius: 2rem;
+      border-top-left-radius: 0;
+
+      left: 2rem;
+      position: relative;
+
+      &::before,
+      &::after {
+         display: block;
+         position: absolute;
+         content: '';
+         left: 0;
+         top: -3rem;
+         width: 50%;
+         height: 3rem;
+      }
+
+      &::before {
+         background: var(--surface);
+         border-top-left-radius: 2rem;
+         border-top-right-radius: 0.8rem;
+         box-shadow: 0px 1rem 0rem var(--surface), 0 0 1rem 0rem var(--primary);
+      }
+
+      &::after {
+         box-sizing: border-box;
+         left: calc(50% - 1rem);
+         top: -2rem;
+         width: 3rem;
+         background: transparent;
+         border-bottom-left-radius: 2rem;
+         border-width: 0 0 1rem 1rem;
+         border-style: solid;
+         border-color: var(--surface);
+      }
+
+      &:nth-child(2n-1),
+      &:nth-child(2n-1)::before {
+         background: var(--primary);
+         box-shadow: 0 0 1rem 0rem var(--primary);
+      }
+
+      &:nth-child(2n-1) {
+         left: -2rem;
+         color: var(--on-primary);
+         &::after {
+            border-color: var(--primary);
+         }
+      }
+   }
+
+   &__item-button {
+      margin-left: auto;
+      margin-right: 0;
+      font-size: 1.4rem;
+
+      &:hover {
+         text-decoration: underline;
+         opacity: 0.85;
+      }
+
+      &:active {
+         opacity: 0.2;
+      }
+   }
+
+   &__item-text {
+   }
 }
