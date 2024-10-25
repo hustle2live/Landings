@@ -1,25 +1,25 @@
 @charset "UTF-8";
 @font-face {
   font-family: "Montserrat";
-  src: url("./Montserrat-Regular.woff2") format("woff2");
+  src: url("Montserrat-Regular.woff2") format("woff2");
   font-weight: 400;
   font-display: swap;
 }
 @font-face {
   font-family: "Montserrat";
-  src: url("./Montserrat-Bold.woff2") format("woff2");
+  src: url("Montserrat-Bold.woff2") format("woff2");
   font-weight: 700;
   font-display: swap;
 }
 @font-face {
   font-family: "Schoolbell";
-  src: url("./Schoolbell-Regular.ttf") format("ttf");
+  src: url("Schoolbell-Regular.ttf") format("ttf");
   font-weight: 400;
   font-display: swap;
 }
 @font-face {
   font-family: "Caveat";
-  src: url("./Caveat-VariableFont_wght.ttf") format("ttf");
+  src: url("Caveat-VariableFont_wght.ttf") format("ttf");
   font-weight: 400;
   font-display: swap;
 }
@@ -454,7 +454,7 @@ h6,
   height: 200vw;
   min-height: 200vw;
   position: relative;
-  background-image: url("../../images/background/ai-generated-8965879_1280.webp");
+  background-image: url("./images/background/ai-generated-8965879_1280.webp");
   -webkit-background-size: cover;
           background-size: cover;
   background-color: var(--surface);
