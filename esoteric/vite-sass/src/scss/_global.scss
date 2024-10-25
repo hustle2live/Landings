@@ -33,7 +33,7 @@ body {
 p,
 button,
 a,
-.text {
+.text, header, footer {
    font-size: 1.625rem;
 }
 
@@ -59,9 +59,10 @@ h6,
 
 .footer {
    padding: 3rem 0;
-   font-size: 1.5rem;
+   font-size: 1.625rem;
 
    a {
+      font-size: 1.625rem;
       text-decoration: none;
    }
 }
