@@ -33,12 +33,18 @@ body {
 p,
 button,
 a,
-.text, header, footer {
+li,
+body {
    font-size: 1.625rem;
 }
 
 .inclined {
    transform: rotate(-5deg);
+}
+
+strong,
+b {
+   font-weight: 600;
 }
 
 h1,
