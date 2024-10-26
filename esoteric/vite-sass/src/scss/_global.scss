@@ -19,7 +19,7 @@ html {
 }
 
 body {
-   font-family: 'Montserrat';
+   font-family: 'Montserrat', sans-serif;
    background: var(--surface-container-lowest);
    color: var(--tertiary);
    font-size: 2.4rem;
@@ -51,7 +51,7 @@ h1,
 h2,
 h3,
 .title {
-   font-family: 'Montserrat';
+   font-family: 'Montserrat', sans-serif;
    font-size: 3rem;
    font-weight: 600;
 }
