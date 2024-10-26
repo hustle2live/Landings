@@ -382,6 +382,7 @@
 .colored {
 }
 
+.testimonials,
 .description,
 .results {
    &__content {
@@ -451,7 +452,10 @@
          margin-left: -20vw;
       }
    }
+}
 
+.testimonials,
+.description {
    &__content {
       ul {
          gap: 1rem;
@@ -504,6 +508,41 @@
          text-align: left;
          justify-self: flex-start;
          align-self: flex-start;
+      }
+   }
+}
+
+.testimonials {
+   padding-bottom: 10rem;
+   background: var(--surface-container-highest);
+   background: linear-gradient(
+      0deg,
+      rgba(0, 255, 235, 0) 0%,
+      var(--surface-container-highest) 25%,
+      var(--surface-container-highest) 75%,
+      rgba(0, 255, 235, 0) 100%
+   );
+
+   li {
+      background-color: var(--surface-container-lowest);
+      min-height: 40vw;
+      border-radius: 2rem;
+      justify-content: stretch;
+      align-items: flex-start;
+   }
+
+   &__content {
+      &-text {
+         font-weight: 400;
+
+         &:first-of-type {
+            font-weight: 600;
+         }
+
+         span {
+            background-color: aqua;
+            background-color: var(--surface-container-high);
+         }
       }
    }
 }
