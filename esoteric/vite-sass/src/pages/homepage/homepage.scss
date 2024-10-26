@@ -57,7 +57,7 @@
    height: 200vw;
    min-height: 200vw;
    position: relative;
-   background-image: url('../../images/background/ai-generated-8965879_1280.webp');
+   background-image: url('@images/background/ai-generated-8965879_1280.webp');
    background-size: cover;
    background-color: var(--surface);
    background-position: center center;
@@ -367,7 +367,7 @@
          .ico {
             display: block;
             position: absolute;
-            content: url('../../images/icons/symbol-svgrepo.svg');
+            content: url('@images/icons/symbol-svgrepo.svg');
             top: 0.8rem;
             left: -2.4rem;
             width: 2rem;

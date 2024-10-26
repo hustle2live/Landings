@@ -1,17 +1,54 @@
 import imagemin from 'imagemin';
 import imageminWebp from 'imagemin-webp';
-import path from 'path';
+
 import { defineConfig } from 'vite';
-import glob from 'fast-glob';
-
-import injectHTML from 'vite-plugin-html-inject';
-import FullReload from 'vite-plugin-full-reload';
-
 import { fileURLToPath } from 'url';
 import { ViteImageOptimizer } from 'vite-plugin-image-optimizer';
 
+import path from 'path';
+import glob from 'fast-glob';
+
+import { createHtmlPlugin } from 'vite-plugin-html';
+import FullReload from 'vite-plugin-full-reload';
+import injectHTML from 'vite-plugin-html-inject';
+
+function imageminOptimize() {
+   return {
+      name: 'vite-plugin-imagemin-optimize',
+      apply: 'serve',
+      async closeBundle() {
+         await imagemin(['src/assets/images/**/*.{jpg,png,jpeg,gif,webp}'], {
+            destination: 'src/assets/images/minified/',
+            plugins: [imageminWebp({ quality: 86 })]
+         });
+         console.log('Images optimized with imagemin');
+      }
+   };
+}
+
+function imageminOptimizeBuild() {
+   return {
+      name: 'vite-plugin-imagemin-optimize',
+      apply: 'build',
+      async closeBundle() {
+         await imagemin(['src/assets/images/**/*.{jpg,png,jpeg,gif,webp}'], {
+            destination: 'dist/assets/images/minified/',
+            plugins: [imageminWebp({ quality: 86 })]
+         });
+         console.log('Images optimized with imagemin for Build');
+      }
+   };
+}
+
 export default defineConfig({
+   resolve: {
+      alias: {
+         '@': path.resolve(__dirname, './src'),
+         '@images': path.resolve(__dirname, './src/assets/images')
+      }
+   },
    plugins: [
+      createHtmlPlugin(),
       injectHTML(),
       FullReload(['./src/**/**.html']),
       ViteImageOptimizer({
@@ -25,13 +62,7 @@ export default defineConfig({
             quality: 86
          }
       }),
-      {
-         ...imagemin(['./src/img/**/*.{jpg,png,jpeg}'], {
-            destination: './src/img/webp/',
-            plugins: [imageminWebp({ quality: 86 })]
-         }),
-         apply: 'serve'
-      }
+      imageminOptimizeBuild()
    ],
    root: 'src',
    base: '',
