@@ -13,13 +13,13 @@
 }
 @font-face {
   font-family: "Schoolbell";
-  src: url("./Schoolbell-Regular.ttf") format("ttf");
+  src: url("./Schoolbell-Regular.ttf") format("truetype");
   font-weight: 400;
   font-display: swap;
 }
 @font-face {
   font-family: "Caveat";
-  src: url("./Caveat-VariableFont_wght.ttf") format("ttf");
+  src: url("./Caveat-VariableFont_wght.ttf") format("truetype");
   font-weight: 400;
   font-display: swap;
 }
@@ -460,7 +460,7 @@ h6,
   font-family: "Caveat", cursive;
   font-style: italic;
   text-transform: none;
-  font-size: 3.75rem;
+  font-size: 5.2rem;
   line-height: 2.4rem;
   font-weight: 400;
   margin-left: 30vw;
@@ -536,7 +536,9 @@ h6,
   width: 100%;
 }
 .header__description {
-  font-size: 2.4rem;
+  font-size: 3.4rem;
+  line-height: 3.4rem;
+  font-weight: 600;
   margin-top: 2.4rem;
   font-family: "Caveat", cursive;
   color: var(--primary);
@@ -846,10 +848,10 @@ h6,
 .description__content-marker,
 .results__content-marker {
   font-weight: 400;
-  font-size: 2rem;
+  font-size: 2.6rem;
   margin: 0;
   font-family: "Caveat", cursive;
-  font-style: italic;
+  font-style: normal;
   text-transform: none;
   justify-self: flex-start;
 }
@@ -1177,6 +1179,10 @@ h6,
   -webkit-align-items: center;
      -moz-box-align: center;
           align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+     -moz-box-pack: justify;
+          justify-content: space-between;
 }
 .questions__dropdown-element {
   height: auto;
@@ -1209,6 +1215,17 @@ h6,
   height: 100%;
   stroke: var(--on-primary);
 }
+.questions__title, .questions__text {
+  max-width: 80%;
+}
+.questions__title::first-letter, .questions__text::first-letter {
+  text-transform: capitalize;
+}
+.questions__text {
+  max-width: 87%;
+  font-size: 1.375rem;
+}
+
 .footer {
   margin-top: 10rem;
   padding: 7.25rem 7vw 2rem;
