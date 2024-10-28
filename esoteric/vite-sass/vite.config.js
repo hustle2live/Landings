@@ -16,7 +16,7 @@ function imageminOptimize() {
    return {
       name: 'vite-plugin-imagemin-optimize',
       apply: 'serve',
-      async closeBundle() {
+      async buildStart() {
          await imagemin(['src/assets/images/**/*.{jpg,png,jpeg,gif,webp}'], {
             destination: 'src/assets/images/minified/',
             plugins: [imageminWebp({ quality: 86 })]
@@ -62,6 +62,7 @@ export default defineConfig({
             quality: 86
          }
       }),
+      imageminOptimize(),
       imageminOptimizeBuild()
    ],
    root: 'src',

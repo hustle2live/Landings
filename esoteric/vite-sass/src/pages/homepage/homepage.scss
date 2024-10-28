@@ -55,20 +55,32 @@
    }
 }
 
-.header {
-   height: 200vw;
-   min-height: 200vw;
+.header,
+.warranty {
    position: relative;
-   background-image: url('@images/background/ai-generated-8965879_1280.webp');
    background-size: cover;
    background-color: var(--surface);
    background-position: center center;
    color: var(--on-tertiary);
    z-index: 0;
 
-   //    background: transparent;
-   //    backdrop-filter: blur(10px);
-   //    backdrop-filter: invert(80%);
+   &__bg-shadow {
+      position: absolute;
+      content: '';
+      display: block;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background: light-dark(rgba(var(--shadow-black), 0.4), rgba(var(--shadow-white), 0.4));
+   }
+}
+
+.header {
+   height: 200vw;
+   min-height: 200vw;
+   background-image: url('@images/background/ai-generated-8965879_1280.webp');
 
    &__main,
    &__cta,
@@ -140,17 +152,6 @@
 
    &__timer {
       font-size: 2.25rem;
-   }
-   &__bg-shadow {
-      position: absolute;
-      content: '';
-      display: block;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-      background: light-dark(rgba(var(--shadow-black), 0.4), rgba(var(--shadow-white), 0.4));
    }
 }
 
@@ -486,10 +487,8 @@
          width: 55%;
          height: calc(100% + 2px);
          border: 2px dashed var(--primary);
-         border-radius: 0;
-         border-top-left-radius: 50%;
-         border-bottom-left-radius: 50%;
-         border-width: 2px 0 2px 2px;
+         border-radius: 50% 0 0 50%;
+         border-right: 2px solid transparent;
       }
 
       &:nth-child(2n)::after {
@@ -540,7 +539,7 @@
          &::before {
             position: absolute;
             left: -2rem;
-            content: url('../../assets/images/icons/add-plus-svgrepo-com-2.svg');
+            content: url('@images/icons/add-plus-svgrepo-com-2.svg');
             width: 3.75rem;
             height: 3.75rem;
             transform: rotate(-4deg);
@@ -555,7 +554,7 @@
          position: absolute;
          right: -1rem;
          bottom: -2rem;
-         content: url('../../assets/images/pictures/blue-gift-3.png');
+         content: url('@images/pictures/blue-gift-3.png');
          width: 12rem;
          height: 12rem;
          transform: rotate(4deg);
@@ -659,5 +658,39 @@
             background-color: var(--surface-container-high);
          }
       }
+   }
+}
+
+.warranty {
+   height: 180vw;
+   min-height: 180vw;
+   background-image: url('@images/background/ai-generated-9007118_640.webp');
+   padding-bottom: 4rem;
+
+   &__bg-shadow {
+      background: light-dark(rgba(var(--shadow-black), 0.4), rgba(var(--shadow-white), 0.4));
+   }
+
+   &__info,
+   &__content {
+      display: flex;
+      flex-direction: column;
+      gap: 1.4rem;
+      margin: 3rem auto;
+      max-width: 87.5vw;
+   }
+
+   &__label {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 7rem;
+      width: 22rem;
+      background: var(--primary);
+      margin: -5rem auto 5rem;
+      transform: rotate(-4deg);
+      text-transform: uppercase;
+      border: 1px dashed var(--on-primary);
+      box-shadow: 0 0 0 1rem var(--primary);
    }
 }
