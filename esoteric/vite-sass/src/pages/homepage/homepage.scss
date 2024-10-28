@@ -14,8 +14,8 @@
    position: relative;
 
    &__title {
-      margin-top: 10rem;
-      margin-bottom: 5rem;
+      max-width: 88vw;
+      margin: 10rem 4vw 5rem;
       font-weight: 400;
       text-transform: uppercase;
 
@@ -35,6 +35,12 @@
          &-colored {
             color: var(--primary);
          }
+
+         &.full-width {
+         }
+
+         &-colored.full-width {
+         }
       }
 
       &_description {
@@ -45,8 +51,6 @@
       display: flex;
       flex-flow: row wrap;
       justify-content: center;
-      // flex-direction: column;
-      // align-items: center;
    }
 
    &__conclusion {
@@ -162,12 +166,6 @@
 }
 
 .timer {
-}
-
-.testimonials {
-}
-
-.testimonials__content {
 }
 
 .benefits {
@@ -440,15 +438,6 @@
 }
 
 .results .roadmap {
-   .section__title_title {
-      margin: 0 7vw;
-      text-align: left;
-      &-colored {
-         margin: 0 7vw;
-         text-align: right;
-      }
-   }
-
    &__list {
       margin: 10rem 10vw 3rem;
       display: flex;
@@ -692,5 +681,65 @@
       text-transform: uppercase;
       border: 1px dashed var(--on-primary);
       box-shadow: 0 0 0 1rem var(--primary);
+   }
+}
+
+.questions {
+   &__list {
+      max-width: 87.5vw;
+   }
+
+   &__item {
+      text-align: left;
+      padding: 2rem;
+      border-radius: 4rem;
+      width: 100%;
+      height: fit-content;
+      color: var(--on-primary);
+      background: var(--primary);
+      margin-bottom: 1.2rem;
+   }
+
+   &__dropdown {
+      &-toggle {
+         display: flex;
+         flex-direction: row-reverse;
+         align-items: center;
+      }
+
+      &-element {
+         height: auto;
+         max-height: 0;
+         overflow: hidden;
+         transition: all 650ms;
+      }
+
+      &.active {
+         .questions__expand {
+            transform: rotate(90deg);
+         }
+
+         .questions__dropdown-element {
+            max-height: 500px;
+            visibility: visible;
+         }
+      }
+   }
+
+   &__expand {
+      display: block;
+      width: 5rem;
+      height: 5rem;
+      transition: 200ms;
+
+      > svg {
+         width: 100%;
+         height: 100%;
+         stroke: var(--on-primary);
+      }
+   }
+   &__title {
+   }
+   &__text {
    }
 }

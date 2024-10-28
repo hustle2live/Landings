@@ -1,12 +1,12 @@
 @use 'mixins';
 
 .wrapper {
-   min-height: 300vh;
-   height: 100vh;
    text-align: center;
    display: flex;
    flex-flow: column;
    position: relative;
+   overflow: hidden;
+
 
    // background-color: var(--surface);
 
