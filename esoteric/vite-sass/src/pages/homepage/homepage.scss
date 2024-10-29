@@ -86,9 +86,9 @@
    height: 200vw;
    min-height: 200vw;
    background-image: url('@images/background/ai-generated-8965879_1280.webp');
-   background-image: url('../../assets/images/photo/IMG_8676.jpg');
-   background-image: url('../../assets/images/photo/IMG_8677.jpg');
-   background-image: url('../../assets/images/photo/IMG_8700.jpg');
+   background-image: url('@/images/photo/IMG_8676.jpg');
+   background-image: url('@/images/photo/IMG_8677.jpg');
+   background-image: url('@/images/photo/IMG_8700.jpg');
 
    &__main,
    &__cta,
