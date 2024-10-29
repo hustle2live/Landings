@@ -60,6 +60,12 @@ export default defineConfig({
          },
          jpg: {
             quality: 86
+         },
+         gif: {
+            quality: 100
+         },
+         webp: {
+            quality: 100
          }
       }),
       imageminOptimize(),
