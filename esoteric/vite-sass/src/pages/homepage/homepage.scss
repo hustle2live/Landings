@@ -1,5 +1,4 @@
-.container {
-}
+@use '../../scss/mixins';
 
 :root {
    --shadow-white: 255, 255, 255;
@@ -147,32 +146,67 @@
       margin: 0 2rem 0.5rem;
       color: var(--on-primary);
       background-color: var(--primary);
-   }
-
-   &__button-strike {
-      text-decoration: line-through;
+      &-strike {
+         text-decoration: line-through;
+      }
    }
 
    &__cta {
       justify-self: flex-end;
    }
 
-   &__time-left {
-      font-size: 1.75rem;
-   }
-
    &__timer {
       font-size: 2.25rem;
+      &-left {
+         font-size: 1.75rem;
+      }
    }
-}
 
-.info {
-}
+   @include mixins.viewport-lg {
+      height: 90vw;
+      min-height: 90vw;
+      flex-flow: column;
 
-.button_primary {
-}
+      &__content,
+      &__info {
+         max-width: 70vw;
+         text-align: left;
+         margin-left: 2.5rem;
+      }
 
-.timer {
+      &__info {
+         width: 40vw;
+      }
+
+      &__button,
+      &__main,
+      &__cta {
+         margin-left: 0;
+      }
+      &__main {
+         margin-bottom: 1rem;
+      }
+
+      &__title {
+         font-size: 1.9rem;
+      }
+
+      &__timer,
+      &__button,
+      &__timer-left,
+      &__subtitle {
+         font-size: 1.4rem;
+         width: auto;
+      }
+      &__subtitle {
+         max-width: 90%;
+      }
+      &__description {
+         font-size: 2.4rem;
+         line-height: 1.625rem;
+         transform: none;
+      }
+   }
 }
 
 .benefits {
@@ -279,9 +313,6 @@
       gap: 3.2rem;
    }
 
-   &__list {
-   }
-
    &__item {
       width: 87.5vw;
       gap: 2rem;
@@ -303,6 +334,24 @@
       &-text {
          span {
             font-weight: bold;
+         }
+      }
+   }
+
+   @include mixins.viewport-lg {
+      &__list {
+         flex-flow: row wrap;
+      }
+
+      &__item {
+         width: 27.5vw;
+
+         &-image {
+            height: 18vw;
+         }
+
+         &:nth-child(2) {
+            margin-top: 10rem;
          }
       }
    }
