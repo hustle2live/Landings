@@ -599,6 +599,78 @@
    }
 }
 
+.testimonials,
+.description {
+   &__content {
+      ul {
+         gap: 1rem;
+      }
+
+      li {
+         color: var(--primary);
+         background: var(--on-primary);
+         border-radius: 3.6rem;
+         min-height: 65vw;
+         height: auto;
+         padding: 2rem;
+         gap: 2rem;
+
+         &::before {
+            display: none;
+         }
+
+         & > div {
+            width: 100%;
+            height: 40vw;
+            border: 0.5rem solid var(--primary);
+            border-radius: 2rem;
+            position: relative;
+            box-shadow: 0rem -2rem 2.4rem -1rem rgba(var(--shadow-black), 0.3) inset;
+
+            img {
+               position: absolute;
+               left: 0;
+               top: 0;
+               width: 100%;
+               height: 100%;
+               object-fit: cover;
+               border-radius: 2rem;
+               z-index: -1;
+            }
+         }
+      }
+
+      &-marker {
+         font-family: 'Montserrat', sans-serif;
+         font-weight: 600;
+         font-size: 2rem;
+         margin: 0;
+         margin-left: auto;
+         font-style: normal;
+      }
+
+      &-text {
+         text-align: left;
+         justify-self: flex-start;
+         align-self: flex-start;
+      }
+
+      @include mixins.viewport-lg {
+         ul {
+            max-width: 87.5vw;
+            flex-flow: row wrap;
+            justify-content: center;
+         }
+         li {
+            width: 49%;
+            height: auto;
+            min-height: unset;
+            border-radius: 2rem;
+         }
+      }
+   }
+}
+
 .description {
    background-color: var(--primary);
    border-radius: 4rem;
@@ -655,62 +727,34 @@
          }
       }
    }
-}
 
-.testimonials,
-.description {
-   &__content {
-      ul {
-         gap: 1rem;
-      }
-
-      li {
-         color: var(--primary);
-         background: var(--on-primary);
-         border-radius: 3.6rem;
-         min-height: 65vw;
-         height: auto;
-         padding: 2rem;
-         gap: 2rem;
-
-         &::before {
-            display: none;
+   @include mixins.viewport-lg {
+      &__content {
+         ul {
+            margin: 0 auto;
+            width: fit-content;
+            justify-content: space-between;
          }
+         li {
+            gap: 1rem;
 
-         & > div {
-            width: 100%;
-            height: 40vw;
-            border: 0.5rem solid var(--primary);
-            border-radius: 2rem;
-            position: relative;
-            box-shadow: 0rem -2rem 2.4rem -1rem rgba(var(--shadow-black), 0.3) inset;
-
-            img {
-               position: absolute;
-               left: 0;
-               top: 0;
-               width: 100%;
-               height: 100%;
-               object-fit: cover;
-               border-radius: 2rem;
-               z-index: -1;
+            & > div {
+               height: 11rem;
+               width: 64%;
+               align-self: flex-start;
+               border-width: 0.4rem;
             }
          }
-      }
 
-      &-marker {
-         font-family: 'Montserrat', sans-serif;
-         font-weight: 600;
-         font-size: 2rem;
-         margin: 0;
-         margin-left: auto;
-         font-style: normal;
-      }
+         &-text {
+            margin: 0 0 auto;
+         }
 
-      &-text {
-         text-align: left;
-         justify-self: flex-start;
-         align-self: flex-start;
+         &-marker {
+            position: absolute;
+            right: 2rem;
+            bottom: 2rem;
+         }
       }
    }
 }
@@ -766,6 +810,21 @@
 
          &:nth-child(2n) > div {
             border-color: var(--secondary-container);
+         }
+      }
+
+      @include mixins.viewport-lg {
+         ul {
+            justify-content: space-between;
+            gap: 5rem;
+         }
+
+         li {
+            width: 45%;
+         }
+
+         li:nth-child(1) {
+            margin: 0 27.5%;
          }
       }
    }
