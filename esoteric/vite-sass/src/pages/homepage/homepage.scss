@@ -366,9 +366,14 @@
       display: flex;
       flex-direction: column;
       gap: 3rem;
-
       text-align: left;
       width: 90vw;
+
+      @include mixins.viewport-lg {
+         flex-direction: row;
+         align-items: center;
+         justify-content: space-between;
+      }
 
       &__text {
          margin: 0.75rem 0;
@@ -378,8 +383,8 @@
       }
 
       &__picture {
-         width: 100%;
          background: transparent;
+         justify-self: center;
 
          &-frame {
             display: block;
@@ -393,12 +398,22 @@
             padding-bottom: 3.8rem;
             border: 1px solid var(--primary);
             background: var(--surface-container-lowest);
+            @include mixins.viewport-lg {
+               width: 20rem;
+               height: 22rem;
+               transform: rotate(8deg);
+               margin: auto;
+            }
          }
 
          img {
             width: 100%;
             height: 100%;
             object-fit: cover;
+         }
+
+         @include mixins.viewport-lg {
+            margin: auto;
          }
       }
 
@@ -407,28 +422,47 @@
          margin-left: auto;
          margin-right: 10vw;
          transform: rotate(10deg);
-      }
-   }
-
-   &__article-content {
-      ul {
-         padding-top: 0.2rem;
-         padding-left: 2.4rem;
+         @include mixins.viewport-lg {
+            transform: rotate(-8deg);
+            margin: 0;
+         }
       }
 
-      li {
-         list-style-type: none;
-         padding-inline-start: 1ch;
-         position: relative;
+      &__content {
+         @include mixins.viewport-lg {
+            width: 50%;
+            ul {
+               max-width: 90%;
+            }
+            li .ico {
+               top: 0.4rem;
+            }
+         }
 
-         .ico {
-            display: block;
-            position: absolute;
-            content: url('@images/icons/symbol-svgrepo.svg');
-            top: 0.8rem;
-            left: -2.4rem;
-            width: 2rem;
-            height: 2rem;
+         ul {
+            padding-top: 0.2rem;
+            padding-left: 2.4rem;
+         }
+
+         li {
+            list-style-type: none;
+            padding-inline-start: 1ch;
+            position: relative;
+
+            .ico {
+               display: block;
+               position: absolute;
+               content: url('@images/icons/symbol-svgrepo.svg');
+               top: 0.8rem;
+               left: -2.4rem;
+               width: 2rem;
+               height: 2rem;
+            }
+         }
+
+         &:last-of-type {
+            display: flex;
+            flex-direction: column;
          }
       }
    }
