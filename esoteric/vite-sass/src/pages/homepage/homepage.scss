@@ -569,19 +569,28 @@
          &:first-child p::before,
          &::after {
             top: -2px;
-            right: -15%;
+            left: unset;
+            right: -14%;
             background: transparent;
-            width: 70%;
+            width: 65%;
             height: calc(100% + 2px);
             border: 2px dashed var(--primary);
             border-radius: 0 50% 50% 0;
             border-left: 2px solid transparent;
+            @include mixins.viewport-lg {
+               width: 60%;
+               right: -10%;
+               border-radius: 0 50% 50% 0 / 0 12rem 12rem 0;
+            }
          }
 
          &:first-child p::before,
          &:nth-child(2n)::after {
             transform: rotate(180deg);
             left: -15%;
+            @include mixins.viewport-lg {
+               left: -10%;
+            }
          }
 
          &:first-child p::before,
@@ -594,6 +603,23 @@
          &:first-child p::before {
             transform: scale(-1, 1);
             top: calc(-100% - 1px);
+         }
+      }
+   }
+
+   @include mixins.viewport-lg {
+      &__content {
+         ul {
+            max-width: 76%;
+         }
+         li {
+            width: auto;
+            height: 20rem;
+            padding: 2rem 5rem;
+            padding-bottom: 4rem;
+         }
+         &-text {
+            font-size: 1.625rem;
          }
       }
    }
@@ -892,7 +918,7 @@
          height: auto;
          max-height: 0;
          overflow: hidden;
-         transition: all 650ms;
+         transition-duration: 1200ms;
       }
 
       &.active {
@@ -934,6 +960,26 @@
 }
 
 .footer {
+   @include mixins.viewport-lg {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr auto;
+      grid-gap: 1fr;
+      grid-template-areas:
+         'f-top-left f-top-right'
+         'f-bottom f-bottom';
+
+      &__info {
+         text-align: right;
+         grid-area: f-top-right;
+      }
+      &__contacts {
+         grid-area: f-top-left;
+      }
+      &__copyright {
+         grid-area: f-bottom;
+      }
+   }
+
    margin-top: 10rem;
    padding: 7.25rem 7vw 2rem;
    display: grid;
