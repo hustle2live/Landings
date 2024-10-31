@@ -56,6 +56,19 @@
          }
       }
 
+      @include mixins.viewport-xxl {
+         max-width: 60vw;
+         &_title {
+            font-size: 3.5rem;
+            margin-bottom: 3rem;
+
+            &-cursive,
+            &-colored {
+               font-size: 7rem;
+            }
+         }
+      }
+
       &_description {
       }
    }
@@ -173,59 +186,6 @@
       }
    }
 
-   @include mixins.viewport-xxl {
-      height: 56.25vw;
-      min-height: 56.25vw;
-      justify-content: space-between;
-      align-items: stretch;
-
-      &__content {
-         margin-left: 5vw;
-         margin-top: auto;
-         margin-bottom: 10vw;
-      }
-
-      &__info {
-         justify-self: flex-end;
-         margin-left: auto;
-         margin-right: 5vw;
-         text-align: right;
-      }
-      &__title {
-         max-width: 48%;
-      }
-      &__subtitle {
-         max-width: 65%;
-         font-size: 1.8rem;
-      }
-
-      &__description {
-         font-size: 3rem;
-         line-height: 3.2rem;
-         max-width: 60%;
-      }
-      &__main {
-         gap: 2rem;
-      }
-      &__button {
-         margin: 0.5rem 0;
-      }
-   }
-
-   @include mixins.viewport-xl {
-      height: 65vw;
-      min-height: 65vw;
-
-      &__title {
-         font-size: 1.65rem;
-      }
-
-      &__button,
-      &__subtitle {
-         font-size: 1.25rem;
-      }
-   }
-
    @include mixins.viewport-lg {
       height: 90vw;
       min-height: 90vw;
@@ -269,6 +229,61 @@
          font-size: 2.4rem;
          line-height: 1.625rem;
          transform: none;
+      }
+   }
+
+   @include mixins.viewport-xl {
+      height: 65vw;
+      min-height: 65vw;
+
+      &__title {
+         font-size: 1.65rem;
+      }
+
+      &__button,
+      &__subtitle {
+         font-size: 1.25rem;
+      }
+   }
+
+   @include mixins.viewport-xxl {
+      height: 56.25vw;
+      min-height: 56.25vw;
+      justify-content: space-between;
+      align-items: stretch;
+
+      &__content {
+         margin-left: 5vw;
+         margin-top: auto;
+         margin-bottom: 10vw;
+      }
+
+      &__info {
+         justify-self: flex-end;
+         margin-left: auto;
+         margin-right: 5vw;
+         text-align: right;
+         width: unset;
+      }
+      &__title {
+         max-width: 48%;
+         line-height: 2.1rem;
+      }
+      &__subtitle {
+         max-width: 65%;
+         font-size: 1.8rem;
+      }
+
+      &__description {
+         font-size: 3rem;
+         line-height: 3.2rem;
+         max-width: 60%;
+      }
+      &__main {
+         gap: 2rem;
+      }
+      &__button {
+         margin: 0.5rem 0;
       }
    }
 }
@@ -766,6 +781,19 @@
          }
       }
    }
+   @include mixins.viewport-xxl {
+      &__content {
+         li {
+            padding: 3rem 6rem 8rem;
+            gap: 5rem;
+            height: auto;
+         }
+
+         &-text {
+            font-size: 1.625rem;
+         }
+      }
+   }
 }
 
 .testimonials,
@@ -958,6 +986,24 @@
          }
       }
    }
+   @include mixins.viewport-xxl {
+      &__content {
+         &-marker {
+            font-size: 2.125rem;
+         }
+
+         &-text {
+            font-size: 1.625rem;
+            max-width: 86%;
+         }
+         li {
+            & > div {
+               height: 18rem;
+               width: 28rem;
+            }
+         }
+      }
+   }
 }
 
 .testimonials {
@@ -1104,6 +1150,7 @@
    }
 
    &__dropdown {
+      cursor: pointer;
       &-toggle {
          display: flex;
          flex-direction: row-reverse;
@@ -1174,37 +1221,6 @@
 }
 
 .footer {
-   @include mixins.viewport-lg {
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: 1fr auto;
-      grid-gap: 1fr;
-      grid-template-areas:
-         'f-top-left f-top-right'
-         'f-bottom f-bottom';
-
-      &__info {
-         text-align: right;
-         grid-area: f-top-right;
-      }
-      &__contacts {
-         grid-area: f-top-left;
-      }
-      &__copyright {
-         grid-area: f-bottom;
-      }
-   }
-
-   @include mixins.viewport-xl {
-      &__label {
-         font-size: 1.25rem;
-      }
-
-      font-size: 1.1rem;
-      a {
-         font-size: 1.1rem;
-      }
-   }
-
    margin-top: 10rem;
    padding: 7.25rem 7vw 2rem;
    display: grid;
@@ -1237,5 +1253,46 @@
    &__copyright {
       margin-top: 3rem;
       text-align: center;
+   }
+
+   @include mixins.viewport-lg {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr auto;
+      grid-gap: 1fr;
+      grid-template-areas:
+         'f-top-left f-top-right'
+         'f-bottom f-bottom';
+
+      &__info {
+         text-align: right;
+         grid-area: f-top-right;
+      }
+      &__contacts {
+         grid-area: f-top-left;
+      }
+      &__copyright {
+         grid-area: f-bottom;
+      }
+   }
+
+   @include mixins.viewport-xl {
+      &__label {
+         font-size: 1.25rem;
+      }
+
+      font-size: 1.1rem;
+      a {
+         font-size: 1.1rem;
+      }
+   }
+   @include mixins.viewport-xxl {
+      &__label {
+         font-size: 1.625rem;
+      }
+
+      font-size: 1.25rem;
+      a {
+         font-size: 1.25rem;
+      }
    }
 }

@@ -74,6 +74,8 @@
       padding-left: 0.2rem;
       @include mixins.viewport-xl {
          font-size: 1.4rem;
+         line-height: 1.2rem;
+         padding: 0rem 1rem 0.2rem 0;
       }
    }
 
@@ -106,8 +108,9 @@
          content: 'Switch Theme @';
       }
       @include mixins.viewport-xl {
-         padding: 0.5rem;
-         font-size: 1rem;
+         font-size: 1.25rem;
+         width: 200px;
+         padding: 0.5rem 1rem;
       }
    }
 }
@@ -126,4 +129,3 @@
 .colored {
    color: var(--primary);
 }
-
