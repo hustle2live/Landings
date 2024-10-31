@@ -9,6 +9,9 @@ html {
    @include mixins.viewport-xl {
       font-size: 12px;
    }
+   @include mixins.viewport-xxl {
+      font-size: 14px;
+   }
 }
 
 .dark {
@@ -81,4 +84,9 @@ h6,
    a {
       text-decoration: none;
    }
+}
+
+button,
+a {
+   cursor: pointer;
 }
