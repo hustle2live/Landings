@@ -7,7 +7,7 @@ html {
       font-size: 10px;
    }
    @include mixins.viewport-xl {
-      font-size: 16px;
+      font-size: 12px;
    }
 }
 
@@ -40,6 +40,9 @@ body {
    @include mixins.viewport-lg {
       font-size: 1.4rem;
    }
+   @include mixins.viewport-xl {
+      font-size: 1.25rem;
+   }
 }
 
 .inclined {
@@ -56,8 +59,12 @@ h2,
 h3,
 .title {
    font-family: 'Montserrat', sans-serif;
-   font-size: 3rem;
+   font-size: 2.5rem;
    font-weight: 600;
+
+   @include mixins.viewport-xl {
+      font-size: 3rem;
+   }
 }
 
 h4,
@@ -72,7 +79,6 @@ h6,
    font-size: 1.625rem;
 
    a {
-      font-size: 1.625rem;
       text-decoration: none;
    }
 }
