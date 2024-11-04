@@ -5,6 +5,10 @@ const dropElements = document.querySelectorAll('.questions__dropdown');
 
 const htmlElement = document.querySelector('html');
 
+const hearedBtn = document.querySelector('.header__button');
+const formCloseBtn = document.querySelector('.close-btn');
+const form = document.querySelector('.form-wrapper');
+
 changeThemeButton.addEventListener('click', () => {
    htmlElement.classList.toggle('dark');
 });
@@ -19,4 +23,8 @@ dropElements.forEach((el) =>
       closeDrops();
       if (!classList.includes('active')) el.classList.add('active');
    })
+);
+
+[hearedBtn, formCloseBtn].forEach((element) =>
+   element.addEventListener('click', () => form.classList.toggle('hidden'))
 );
