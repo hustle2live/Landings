@@ -40,11 +40,11 @@
    font-size: 1.2rem;
    font-weight: 600;
    padding: 1rem;
-   color: var(--primary);
-   background-color: var(--on-primary);
+   color: var(--primary-container);
+   background-color: var(--on-primary-container);
    width: auto;
    cursor: pointer;
-   border: 2px solid var(--primary) !important;
+   border: 2px solid var(--primary-container) !important;
    transition: 0.2s ease;
    box-shadow: 3px 4px 10px -4px var(--inverse-surface);
    &:hover {
@@ -127,5 +127,5 @@
 }
 
 .colored {
-   color: var(--primary);
+   color: var(--primary-container);
 }
