@@ -129,3 +129,36 @@
 .colored {
    color: var(--primary-container);
 }
+
+@keyframes shake {
+   0% {
+      transform: rotate(250deg) scale(-1, 1);
+   }
+   50% {
+      transform: rotate(220deg) scale(-1, 1);
+   }
+   100% {
+      transform: rotate(250deg) scale(-1, 1);
+   }
+}
+@keyframes shake-right {
+   0% {
+      transform: rotate(70deg) scale(1);
+   }
+   50% {
+      transform: rotate(96deg) scale(1);
+   }
+   100% {
+      transform: rotate(70deg) scale(1);
+   }
+}
+
+@keyframes rise {
+   0% {
+      transform: translate(50%, 100%) scale(0);
+   }
+   25%,
+   100% {
+      transform: translate(0%, 0%) scale(1);
+   }
+}

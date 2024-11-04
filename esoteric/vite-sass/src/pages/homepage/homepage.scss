@@ -390,6 +390,7 @@
    .section__title_title-colored {
       margin-left: unset;
    }
+
    &__list,
    &__item {
       display: flex;
@@ -512,6 +513,8 @@
             padding-bottom: 3.8rem;
             border: 1px solid var(--primary-container);
             background: var(--surface-container-lowest);
+            position: relative;
+
             @include mixins.viewport-lg {
                width: 20rem;
                height: 22rem;
@@ -522,6 +525,29 @@
                width: 30rem;
                height: 32rem;
                margin: 5vw auto;
+            }
+         }
+
+         &-bg_icon {
+            position: absolute;
+            top: -4rem;
+            left: -3.2rem;
+            svg {
+               transform: rotate(-25deg);
+               width: 4rem;
+               height: 3.2rem;
+            }
+            svg path {
+               stroke: var(--primary-container);
+               fill: transparent;
+            }
+            @include mixins.viewport-md {
+               svg {
+                  width: 5rem;
+                  height: 4rem;
+               }
+               top: -5rem;
+               left: -4rem;
             }
          }
 
@@ -536,11 +562,47 @@
          }
       }
 
+      &:first-child &__picture-bg_icon {
+         animation: rise 4.2s ease-in-out infinite;
+         @include mixins.viewport-xl {
+            animation-duration: 3.2s;
+         }
+      }
+      &:last-child &__picture-bg_icon {
+         left: -12rem;
+         top: 75%;
+         transform: rotate(250deg) scale(-1, 1);
+         animation: shake 2.3s ease-in-out infinite;
+
+         svg {
+            width: 8rem;
+            height: 8rem;
+         }
+
+         svg g path {
+            fill: var(--primary-container);
+         }
+
+         @include mixins.viewport-lg {
+            left: -12rem;
+            top: 40%;
+         }
+
+         @include mixins.viewport-xl {
+            left: unset;
+            top: -17%;
+            right: -10vw;
+            transform: rotate(70deg) scale(1);
+            animation: shake-right 2.8s ease-in-out infinite;
+         }
+      }
+
       &:last-child &__picture-frame {
          margin-top: -20%;
          margin-left: auto;
          margin-right: 10vw;
          transform: rotate(10deg);
+
          @include mixins.viewport-lg {
             transform: rotate(-8deg);
             margin: 0;
