@@ -120,6 +120,11 @@
    &.hidden {
       visibility: hidden;
       z-index: -99;
+      .form__button-submit {
+         pointer-events: none;
+         background: var(--surface-container-highest);
+         color: var(--outline);
+      }
    }
 
    @include mixins.viewport-md {
