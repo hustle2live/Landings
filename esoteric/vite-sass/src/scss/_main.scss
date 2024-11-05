@@ -126,6 +126,7 @@
    padding: 1rem;
    margin: 0;
    border-radius: 1rem;
+   z-index: 2;
 
    svg {
       height: 2.2rem;
@@ -145,6 +146,58 @@
 
 .colored {
    color: var(--primary-container);
+}
+
+.cta {
+   position: sticky;
+   bottom: 0;
+   width: 100%;
+   padding: 2.5rem 1rem;
+   border-radius: 2.2rem 2.2rem 0 0;
+   text-align: center;
+   background: var(--primary-container);
+   z-index: 1;
+   margin-top: -2.25rem;
+
+   &__button {
+      margin: auto;
+      padding: 1rem 2rem;
+      font-size: 1.2rem;
+      border-radius: 1rem;
+      background: var(--surface-container-lowest);
+      &:hover {
+         background: var(--surface-container-low);
+      }
+      &:active {
+         background: var(--surface-container);
+      }
+   }
+
+   @include mixins.viewport-md {
+      &__button {
+         padding: 1.2rem 2.4rem;
+         font-size: 1.4;
+      }
+   }
+
+   @include mixins.viewport-xl {
+      &__button {
+         padding: 1.4rem 4rem;
+         border-radius: 1rem;
+      }
+   }
+
+   @include mixins.viewport-xxl {
+      padding: 4rem 2rem;
+      border-radius: 4rem 4rem 0 0;
+      margin-top: -3.5rem;
+
+      &__button {
+         padding: 1.4rem 4rem;
+         border-radius: 1rem;
+         font-size: 1.625rem;
+      }
+   }
 }
 
 @keyframes shake {
