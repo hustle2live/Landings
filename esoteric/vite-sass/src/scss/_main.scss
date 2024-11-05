@@ -151,6 +151,8 @@
 
 .cta {
    display: block;
+   visibility: visible;
+   opacity: 1;
    position: sticky;
    bottom: 0;
    width: 100%;
@@ -159,11 +161,15 @@
    text-align: center;
    background: var(--primary-container);
    margin-top: -2.25rem;
-   transition: 750ms ease-in;
+   transition: all 750ms ease-in;
    z-index: 0;
 
    &.hidden {
-      visibility: hidden;
+      opacity: 0;
+      transition: all 750ms ease-in;
+      .cta__button {
+         pointer-events: none !important;
+      }
    }
 
    &__button {
