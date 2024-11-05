@@ -1,11 +1,14 @@
-@use '../colors/beige/light' as light;
-@use '../colors/beige/dark' as dark;
+// @use '../colors/gold/light' as light;
+// @use '../colors/gold/dark' as dark;
+
+// @use '../colors/beige/light' as light;
+// @use '../colors/beige/dark' as dark;
 
 // @use '../colors/pink/light' as light;
 // @use '../colors/pink/dark' as dark;
 
-// @use '../colors/blue/light' as light;
-// @use '../colors/blue/dark' as dark;
+@use '../colors/blue/light' as light;
+@use '../colors/blue/dark' as dark;
 
 :root {
    color-scheme: light dark;
