@@ -13,38 +13,44 @@
    display: flex;
    box-sizing: border-box;
    flex-direction: column;
-   background: var(--surface);
+   background: var(--surface-container);
+   background: var(--surface-bright);
    border-radius: 3rem;
-   font-size: 1.625rem;
    color: var(--on-surface);
-   gap: 1.25rem;
+   gap: 3vw;
    overflow: hidden;
-   padding: 4rem 3rem;
-   min-width: 310px;
-   max-width: 98vw;
+   padding: 10vw 4vw 12vw;
+   width: 94vw;
    text-align: center;
    align-items: center;
    box-shadow: 3rem 1rem 3rem 0 var(--scrim);
    z-index: 3;
 
    &__heading {
-      font-size: 2.6rem;
+      font-size: 5vw;
+      font-weight: 600;
       text-transform: uppercase;
    }
 
-   p {
-      margin: 0.75rem 0;
+   &__description p {
+      font-size: 3.5vw;
+      margin: 2vw 0;
+      &:last-of-type {
+         font-weight: 600;
+      }
    }
 
    &__after-text {
-      font-size: 1.25rem;
+      font-size: 2.8vw;
+      font-weight: 500;
+      max-width: 92%;
    }
 
    .form {
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 1.25rem;
+      gap: 3vw;
       width: 100%;
       margin: 1rem auto 2rem;
 
@@ -52,7 +58,7 @@
          padding: 0.8rem 1.2rem;
          border-bottom: 1px solid var(--scrim);
          text-align: left;
-         font-size: 1.4rem;
+         font-size: 3.4vw;
          width: 100%;
 
          &:active {
@@ -62,22 +68,17 @@
          &::placeholder {
             color: grey;
          }
-         &-name {
-         }
-         &-email {
-         }
-         &-phone {
-         }
       }
 
       &__button-submit {
          color: var(--on-primary);
          background: var(--primary);
-         padding: 1rem;
          border-radius: 2rem;
-         font-size: 1.4rem;
+         font-size: 3.2vw;
+         padding: 2.5vw;
+
          width: 100%;
-         margin-top: 2rem;
+         margin-top: 3vw;
 
          &:hover {
             opacity: 0.92;
@@ -90,8 +91,8 @@
 
    .close-btn {
       position: absolute;
-      width: 2.6rem;
-      height: 2.6rem;
+      width: 7vw;
+      height: 7vw;
       top: 1.4rem;
       right: 1.4rem;
       display: block;

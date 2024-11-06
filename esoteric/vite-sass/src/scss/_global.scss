@@ -22,9 +22,17 @@ html {
    color: red !important;
 }
 
+.colored {
+   color: var(--primary-container);
+}
+
+.inclined {
+   transform: rotate(-5deg);
+}
+
 body {
    font-family: 'Montserrat', sans-serif;
-   // background: var(--surface);
+   background: var(--surface);
    transition: background 0.2s ease, color 0.2s ease;
 }
 
@@ -35,7 +43,20 @@ body {
 p,
 button,
 a,
-li,
+li {
+   font-size: 4.06vw;
+
+   @include mixins.viewport-lg {
+      font-size: 1.4rem;
+   }
+   @include mixins.viewport-xl {
+      font-size: 1.25rem;
+   }
+   @include mixins.viewport-xxl {
+      font-size: 1.625rem;
+   }
+}
+
 body {
    font-size: 1.625rem;
 
@@ -50,10 +71,6 @@ body {
    }
 }
 
-.inclined {
-   transform: rotate(-5deg);
-}
-
 strong,
 b {
    font-weight: 600;
@@ -66,10 +83,18 @@ s {
 h1,
 h2,
 h3,
-.title {
+.title,
+.section__title_title {
    font-family: 'Montserrat', sans-serif;
-   font-size: 2.5rem;
-   font-weight: 600;
+   // color: var(--outline);
+   color: var(--on-surface-variant);
+
+   font-size: 6.1vw;
+   font-weight: 500;
+
+   // @include mixins.viewport-md {
+   //    font-size: 1rem;
+   // }
 
    @include mixins.viewport-xl {
       font-size: 3rem;

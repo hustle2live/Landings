@@ -1,5 +1,5 @@
 @mixin viewport-md {
-   @media (min-width: 464px) {
+   @media (min-width: 480px) {
       @content;
    }
 }
