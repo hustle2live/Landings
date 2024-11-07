@@ -43,7 +43,7 @@
    &__after-text {
       font-size: 2.8vw;
       font-weight: 500;
-      max-width: 92%;
+      max-width: 87%;
    }
 
    .form {
@@ -130,11 +130,44 @@
    }
 
    @include mixins.viewport-md {
-      min-width: 80%;
+      width: 80vw;
+      padding: 6vw 4vw;
+      gap: 1.2vw;
+
+      &__heading {
+         font-size: 3.5vw;
+      }
+      &__description p {
+         font-size: 2.5vw;
+      }
+      &__after-text {
+         font-size: 2.25vw;
+      }
+      .form {
+         width: 90%;
+         gap: 2vw;
+
+         &__input {
+            font-size: 1.4rem;
+         }
+         &__button-submit {
+            font-size: 2.5vw;
+            margin-top: 2vw;
+            padding: 2vw 0;
+            border-radius: 25px;
+         }
+      }
+      .close-btn {
+         width: 6vw;
+         height: 6vw;
+      }
    }
 
    @include mixins.viewport-lg {
-      min-width: 50%;
+      width: 50vw;
+      &__heading {
+         font-size: 3vw;
+      }
    }
 
    @include mixins.viewport-xl {

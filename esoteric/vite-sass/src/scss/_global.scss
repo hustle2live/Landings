@@ -40,28 +40,18 @@ body {
    margin: 0;
 }
 
+body,
 p,
 button,
 a,
 li {
    font-size: 4.06vw;
 
+   @include mixins.viewport-md {
+      font-size: 2.465vw;
+   }
    @include mixins.viewport-lg {
-      font-size: 1.4rem;
-   }
-   @include mixins.viewport-xl {
-      font-size: 1.25rem;
-   }
-   @include mixins.viewport-xxl {
-      font-size: 1.625rem;
-   }
-}
-
-body {
-   font-size: 1.625rem;
-
-   @include mixins.viewport-lg {
-      font-size: 1.4rem;
+      font-size: 3vw;
    }
    @include mixins.viewport-xl {
       font-size: 1.25rem;

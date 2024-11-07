@@ -178,7 +178,7 @@
    }
 
    &__button {
-      padding: 1.1rem 4rem;
+      padding: 1.1rem 0;
       border-radius: 1.125rem;
       width: 100%;
       color: var(--on-primary-container);
@@ -201,15 +201,38 @@
       width: 80vw;
    }
 
-   &__timer {
-      font-size: 2.25rem;
-      &-left {
-         font-size: 1.75rem;
-      }
-   }
-
    @include mixins.viewport-md {
       height: 130vw;
+      &__button,
+      &__text {
+         font-size: 2.2vw;
+      }
+      &__title {
+         max-width: 75%;
+         font-size: 3vw;
+      }
+      &__subtitle {
+         font-size: 2.7vw;
+         width: 60vw;
+      }
+      &__description {
+         font-size: 4.25vw;
+         line-height: 4vw;
+         width: 50vw;
+      }
+      &__cta {
+         width: 37vw;
+         button {
+            padding: 2.113vw 0;
+         }
+      }
+      &__content {
+         margin-bottom: 5vw;
+      }
+      &__main {
+         margin-bottom: 1vw;
+         gap: 3vw;
+      }
    }
 
    @include mixins.viewport-lg {
