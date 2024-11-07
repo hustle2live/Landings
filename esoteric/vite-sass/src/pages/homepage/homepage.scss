@@ -14,7 +14,7 @@
 
    &__title {
       max-width: 88vw;
-      margin: 10rem 4vw 5rem;
+      margin: 20vw 4vw 14vw;
       font-weight: 400;
       text-transform: uppercase;
 
@@ -24,7 +24,7 @@
             font-family: 'Caveat', cursive;
             font-style: italic;
             text-transform: none;
-            font-size: 5.2rem;
+            font-size: 13vw;
             line-height: 2.4rem;
             font-weight: 400;
             margin-left: 30vw;
@@ -41,6 +41,20 @@
          }
       }
 
+      @include mixins.viewport-md {
+         max-width: 60%;
+         margin-left: auto;
+         margin-right: auto;
+
+         &_title {
+            line-height: 3.2vw;
+            &-cursive,
+            &-colored {
+               font-size: 7vw;
+            }
+         }
+      }
+
       @include mixins.viewport-xl {
          margin-left: auto;
          margin-right: auto;
@@ -49,7 +63,7 @@
          &_title {
             &-cursive,
             &-colored {
-               font-size: 6rem;
+               // font-size: 6rem;
             }
          }
       }
@@ -57,12 +71,11 @@
       @include mixins.viewport-xxl {
          max-width: 60vw;
          &_title {
-            font-size: 3.5rem;
             margin-bottom: 3rem;
 
             &-cursive,
             &-colored {
-               font-size: 7rem;
+               // font-size: 7rem;
             }
          }
       }
@@ -181,6 +194,7 @@
       padding: 1.1rem 0;
       border-radius: 1.125rem;
       width: 100%;
+      text-align: center;
       color: var(--on-primary-container);
       background-color: var(--primary-container);
       &-strike {
@@ -222,9 +236,9 @@
       }
       &__cta {
          width: 37vw;
-         button {
-            padding: 2.113vw 0;
-         }
+      }
+      &__button {
+         padding: 2.113vw 0;
       }
       &__content {
          margin-bottom: 5vw;
@@ -239,44 +253,68 @@
       height: 90vw;
       flex-flow: column;
 
-      &__content,
-      &__info {
-         max-width: 70vw;
+      &__info,
+      &__content {
+         width: 35vw;
          text-align: left;
-         margin-left: 2.5rem;
+         align-items: flex-start;
+         margin-left: 4vw;
       }
-
-      &__info {
-         width: 40vw;
+      &__content {
+         width: 70vw;
+         margin: auto 4vw 6%;
+         gap: 1.5rem;
       }
-
+      &__cta {
+         width: auto;
+      }
+      &__button {
+         width: auto;
+         margin-right: auto;
+         font-size: 1.8vw;
+         padding: 1rem 5vw;
+      }
       &__button,
       &__main,
       &__cta {
          margin-left: 0;
       }
       &__main {
+         gap: 2.4rem;
          margin-bottom: 1rem;
+         align-items: flex-start;
       }
-
       &__title {
-         font-size: 1.9rem;
+         font-size: 2.47vw;
       }
-
       &__timer,
-      &__button,
-      &__timer-left,
+      &__time-left {
+         display: none;
+      }
       &__subtitle {
          font-size: 1.4rem;
-         width: auto;
-      }
-      &__subtitle {
-         max-width: 90%;
+         width: 70%;
       }
       &__description {
          font-size: 2.4rem;
-         line-height: 1.625rem;
+         line-height: 1.75rem;
          transform: none;
+         width: 100%;
+      }
+      &__text {
+         font-size: 1.25rem;
+      }
+   }
+
+   @include mixins.viewport-lg-med {
+      &__title {
+         font-size: 1.815vw;
+      }
+      &__button {
+         font-size: 1.5vw;
+      }
+      &__main {
+         gap: 1.4rem;
       }
    }
 
@@ -466,12 +504,24 @@
       }
 
       &-text {
+         color: var(--on-surface);
          span {
-            font-weight: bold;
+            font-weight: 600;
+            opacity: 0.8;
          }
       }
    }
 
+   @include mixins.viewport-md {
+      &__item {
+         width: 47vw;
+         gap: 1.8vw;
+         &-image {
+            height: 22.85vw;
+            border-radius: 20px;
+         }
+      }
+   }
    @include mixins.viewport-lg {
       &__list {
          flex-flow: row wrap;
@@ -984,8 +1034,8 @@
 .description {
    background-color: var(--primary-container);
    border-radius: 4rem;
-   margin-top: 5rem;
-   padding: 7.5rem 0;
+   margin-top: 14vw;
+   padding: 16vw 0;
 
    .section__title {
       margin-top: 0rem;
@@ -1401,12 +1451,12 @@
    }
    @include mixins.viewport-xxl {
       &__label {
-         font-size: 1.625rem;
+         font-size: 1.65vw;
       }
 
-      font-size: 1.25rem;
       a {
-         font-size: 1.25rem;
+         line-height: 1.4vw;
+         font-size: 1.25vw;
       }
    }
 }

@@ -8,6 +8,11 @@
       @content;
    }
 }
+@mixin viewport-lg-med {
+   @media (min-width: 991px) {
+      @content;
+   }
+}
 @mixin viewport-xl {
    @media (min-width: 1023px) {
       @content;
