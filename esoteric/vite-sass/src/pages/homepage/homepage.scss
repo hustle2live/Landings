@@ -918,6 +918,22 @@
       }
    }
 
+   @include mixins.viewport-md {
+      align-items: center;
+      li {
+         height: auto;
+         gap: 2vw;
+         padding: 2vw 5vw 6vw;
+      }
+      &__content li {
+         width: 80vw;
+      }
+
+      &__content-marker {
+         font-size: 4vw;
+      }
+   }
+
    @include mixins.viewport-lg {
       &__content {
          ul {
@@ -925,7 +941,6 @@
          }
          li {
             width: auto;
-            height: auto;
             gap: 2vw;
             padding: 2vw 5vw 6vw;
          }
@@ -1268,12 +1283,13 @@
 
       li {
          height: auto;
+         padding-top: 6vw;
+         gap: 3vw;
 
          div {
             min-height: 200px;
             height: auto;
-            border-color: var(--tertiary-container);
-            border-color: rgba(0, 128, 0, 0.574);
+            border-color: rgba(48, 161, 13, 0.574);
          }
 
          div img {
@@ -1283,9 +1299,22 @@
             border-radius: 2rem;
          }
 
-         &:nth-child(2n) > div {
-            border-color: var(--secondary-container);
-            border-color: rgba(0, 128, 0, 0.574);
+         // &:nth-child(2n) > div {
+         //    border-color: rgba(0, 128, 0, 0.574);
+         // }
+      }
+
+      @include mixins.viewport-md {
+         li {
+            padding-top: 4vw;
+            width: 55vw;
+            border-radius: 3vw;
+            & > div {
+               width: 100%;
+               height: auto;
+               border-radius: 4vw;
+               border-width: 0.8vw;
+            }
          }
       }
 
@@ -1370,7 +1399,6 @@
    &__list {
       max-width: 87.5vw;
    }
-
    &__item {
       text-align: left;
       padding: 4.6vw 5vw;
@@ -1381,7 +1409,6 @@
       background: var(--primary-container);
       margin-bottom: 1.2rem;
    }
-
    &__dropdown {
       cursor: pointer;
       &-toggle {
@@ -1409,7 +1436,6 @@
          }
       }
    }
-
    &__expand {
       display: block;
       width: 10.938vw;
@@ -1422,11 +1448,9 @@
          stroke: var(--on-primary-container);
       }
    }
-
    &__title {
       font-size: 4.288vw;
    }
-
    &__title,
    &__text {
       max-width: 80%;
@@ -1439,6 +1463,23 @@
       padding: 1rem 0;
       & strong {
          color: var(--on-primary-container);
+      }
+   }
+
+   @include mixins.viewport-md {
+      &__item {
+         padding: 2vw 3vw;
+      }
+      &__title {
+         font-size: 2.64vw;
+      }
+      &__expand {
+         width: 7.45vw;
+         height: 7.45vw;
+      }
+      &__text {
+         max-width: unset;
+         padding: 1.6vw 5vw 1.6vw 0;
       }
    }
 
@@ -1480,7 +1521,7 @@
 
    &__link {
       margin: 0;
-      line-height: 1.5rem;
+      line-height: 4.4vw;
       &:hover {
          text-decoration: underline;
       }
@@ -1494,6 +1535,15 @@
    &__copyright {
       margin-top: 3rem;
       text-align: center;
+   }
+
+   @include mixins.viewport-md {
+      &__label {
+         font-size: 2.64vw;
+      }
+      &__link {
+         line-height: 2.4vw;
+      }
    }
 
    @include mixins.viewport-lg {
@@ -1515,7 +1565,6 @@
          grid-area: f-bottom;
       }
    }
-
    @include mixins.viewport-xl {
       &__label {
          font-size: 1.25rem;
