@@ -55,18 +55,15 @@
             }
          }
       }
-
+      @include mixins.viewport-lg {
+         &_title {
+            line-height: 4.2vw;
+         }
+      }
       @include mixins.viewport-xl {
          margin-left: auto;
          margin-right: auto;
          max-width: 80%;
-
-         &_title {
-            &-cursive,
-            &-colored {
-               // font-size: 6rem;
-            }
-         }
       }
 
       @include mixins.viewport-xxl {
@@ -958,7 +955,7 @@
          }
 
          &-text {
-            font-size: 1.25vw;
+            font-size: 1.411vw;
          }
       }
    }
@@ -1217,12 +1214,12 @@
          }
       }
       &__conclusion-list {
-         margin-top: 5rem;
-         gap: 1rem;
+         margin-top: 6vw;
+         gap: 2vw;
       }
 
       &__conclusion-item {
-         padding: 1rem 4rem;
+         padding: 0rem 4rem;
          &::before {
             top: 0rem;
          }
@@ -1327,6 +1324,10 @@
 
          li {
             width: 45%;
+            p {
+               font-size: 2vw;
+               margin: 0;
+            }
             &:last-of-type {
                margin-top: 5rem;
                margin-bottom: -5rem;
@@ -1345,7 +1346,6 @@
             padding: 3vw 0 10vw;
          }
          li {
-            width: 25%;
             &:nth-child(1) {
                margin: 0 30%;
             }
@@ -1483,6 +1483,23 @@
       }
    }
 
+   @include mixins.viewport-lg {
+      &__item {
+         padding: 1vw 2vw;
+      }
+      &__title {
+         font-size: 1.64vw;
+         line-height: 1.25;
+      }
+      &__expand {
+         width: 4.65vw;
+         height: 4.65vw;
+      }
+      &__text {
+         font-size: 1.4vw;
+         padding: 0.4vw 5vw 1.6vw 0;
+      }
+   }
    @include mixins.viewport-xl {
       &__item {
          padding: 1.2rem 2.6rem;
@@ -1547,6 +1564,8 @@
    }
 
    @include mixins.viewport-lg {
+      padding: 5.05rem 5.05vw 3rem;
+      border-radius: 3rem 3rem 0 0;
       grid-template-columns: 1fr 1fr;
       grid-template-rows: 1fr auto;
       grid-gap: 1fr;
@@ -1554,6 +1573,16 @@
          'f-top-left f-top-right'
          'f-bottom f-bottom';
 
+      &__label {
+         font-size: 1.65vw;
+      }
+
+      a,
+      &__copyright,
+      &__link {
+         font-size: 1.42vw;
+         line-height: 1.2;
+      }
       &__info {
          text-align: right;
          grid-area: f-top-right;

@@ -192,6 +192,11 @@
          font-size: 2.4vw;
       }
    }
+   @include mixins.viewport-lg {
+      &__button {
+         font-size: 2vw;
+      }
+   }
 
    @include mixins.viewport-xl {
       &__button {
