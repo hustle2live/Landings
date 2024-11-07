@@ -51,7 +51,7 @@ li {
       font-size: 2.465vw;
    }
    @include mixins.viewport-lg {
-      font-size: 3vw;
+      font-size: 1.823vw;
    }
    @include mixins.viewport-xl {
       font-size: 1.25rem;
@@ -64,6 +64,11 @@ li {
 strong,
 b {
    font-weight: 600;
+}
+
+strong:not(.colored) {
+   opacity: 0.8;
+   color: var(--inverse-surface);
 }
 
 s {

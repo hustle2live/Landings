@@ -45,6 +45,7 @@
          max-width: 60%;
          margin-left: auto;
          margin-right: auto;
+         margin: 12vw auto 8vw;
 
          &_title {
             line-height: 3.2vw;
@@ -157,8 +158,8 @@
    }
 
    &__content {
-      margin-bottom: 15vw;
-      gap: 5vw;
+      margin-bottom: 13vw;
+      gap: 4vw;
    }
 
    &__main {
@@ -191,7 +192,7 @@
    }
 
    &__button {
-      padding: 1.1rem 0;
+      padding: 2.81vw 5vw;
       border-radius: 1.125rem;
       width: 100%;
       text-align: center;
@@ -471,7 +472,7 @@
    &__item {
       display: flex;
       flex-direction: column;
-      gap: 3.2rem;
+      gap: 4rem;
    }
 
    &__item {
@@ -507,6 +508,7 @@
          color: var(--on-surface);
          span {
             font-weight: 600;
+            color: var(--inverse-surface);
             opacity: 0.8;
          }
       }
@@ -677,16 +679,16 @@
          }
 
          @include mixins.viewport-lg {
-            left: -12rem;
-            top: 40%;
-         }
-
-         @include mixins.viewport-xl {
             left: unset;
-            top: -17%;
+            top: -40%;
             right: -10vw;
             transform: rotate(70deg) scale(1);
             animation: shake-right 2.8s ease-in-out infinite;
+         }
+
+         @include mixins.viewport-xl {
+            top: -17%;
+            right: -10vw;
          }
       }
 
@@ -703,16 +705,6 @@
       }
 
       &__content {
-         @include mixins.viewport-lg {
-            width: 50%;
-            ul {
-               max-width: 90%;
-            }
-            li .ico {
-               top: 0.4rem;
-            }
-         }
-
          ul {
             padding-top: 0.2rem;
             padding-left: 2.4rem;
@@ -738,6 +730,22 @@
             display: flex;
             flex-direction: column;
          }
+
+         @include mixins.viewport-lg {
+            width: 50%;
+            ul {
+               max-width: 90%;
+            }
+            li .ico {
+               top: 0.4rem;
+            }
+         }
+      }
+   }
+
+   @include mixins.viewport-lg {
+      &__article {
+         flex-direction: row;
       }
    }
 
@@ -805,20 +813,19 @@
 
       &-marker {
          font-weight: 400;
-         font-size: 2.6rem;
+         font-size: 6vw;
          margin: 0;
          font-family: 'Caveat', cursive;
          font-style: normal;
          text-transform: none;
          justify-self: flex-start;
          @include mixins.viewport-xl {
-            font-size: 2.25rem;
+            font-size: 3vw;
          }
       }
 
       &-text {
          justify-self: center;
-         margin: auto 0;
          &::first-letter {
             text-transform: capitalize;
          }
@@ -829,6 +836,10 @@
 .results {
    .section__title:first-of-type {
       margin-top: 0;
+   }
+
+   &__content-text {
+      margin: auto 5vw;
    }
 
    .roadmap {
@@ -910,47 +921,29 @@
    @include mixins.viewport-lg {
       &__content {
          ul {
-            max-width: 76%;
+            max-width: 76vw;
          }
          li {
             width: auto;
-            height: 20rem;
-            padding: 2rem 5rem;
-            padding-bottom: 4rem;
+            height: auto;
+            gap: 2vw;
+            padding: 2vw 5vw 6vw;
          }
          &-text {
-            font-size: 1.625rem;
+            font-size: 1.6vw;
          }
       }
    }
 
    @include mixins.viewport-xl {
       &__content {
-         ul {
-            max-width: 60%;
-         }
          li {
             width: auto;
-            height: 15rem;
-            padding: 1.8rem 4rem;
-            padding-bottom: 3rem;
+            padding: 2vw 5vw 6vw;
          }
 
          &-text {
-            font-size: 1.25rem;
-         }
-      }
-   }
-   @include mixins.viewport-xxl {
-      &__content {
-         li {
-            padding: 3rem 6rem 8rem;
-            gap: 5rem;
-            height: auto;
-         }
-
-         &-text {
-            font-size: 1.625rem;
+            font-size: 1.25vw;
          }
       }
    }
@@ -964,13 +957,13 @@
       }
 
       li {
-         color: var(--primary-container);
+         color: var(--scrim);
          background: var(--on-primary-container);
          border-radius: 3.6rem;
          min-height: 65vw;
          height: auto;
-         padding: 2rem;
-         gap: 2rem;
+         padding: 5vw 5vw 7vw;
+         gap: 2.3rem;
 
          &::before {
             display: none;
@@ -978,9 +971,10 @@
 
          & > div {
             width: 100%;
-            height: 40vw;
-            border: 0.5rem solid var(--primary-container);
-            border-radius: 2rem;
+            height: 45vw;
+            margin-top: 1vw;
+            border: 1.4vw solid var(--primary-container);
+            border-radius: 3.25rem;
             position: relative;
             box-shadow: 0rem -2rem 2.4rem -1rem rgba(var(--shadow-black), 0.3) inset;
 
@@ -995,15 +989,34 @@
                z-index: -1;
             }
          }
+
+         @include mixins.viewport-md {
+            border-radius: 3.2rem;
+            padding: 2vw 4vw 4.5vw;
+            gap: 2vw;
+            min-height: unset;
+            & > div {
+               width: 88%;
+               height: 41vw;
+               border-width: 1.2vw;
+            }
+            p {
+               font-size: 2.6vw;
+            }
+         }
       }
 
       &-marker {
+         color: var(--outline);
          font-family: 'Montserrat', sans-serif;
-         font-weight: 600;
-         font-size: 2rem;
+         font-weight: 500;
+         font-size: 5vw;
          margin: 0;
          margin-left: auto;
          font-style: normal;
+         @include mixins.viewport-md {
+            font-size: 3vw;
+         }
          @include mixins.viewport-xl {
             font-size: 1.6rem;
          }
@@ -1025,7 +1038,17 @@
             width: 49%;
             height: auto;
             min-height: unset;
-            border-radius: 2rem;
+            border-radius: 3rem;
+
+            padding: 2.72vw 3vw 3vw;
+            gap: 2vw;
+            min-height: unset;
+
+            & > div {
+               border-width: 0.6vw;
+               width: 100%;
+               border-radius: 2rem;
+            }
          }
       }
    }
@@ -1033,16 +1056,30 @@
 
 .description {
    background-color: var(--primary-container);
-   border-radius: 4rem;
-   margin-top: 14vw;
-   padding: 16vw 0;
+   border-radius: 30px;
+   margin-top: 18.75vw;
+   padding: 18.75vw 0;
 
    .section__title {
-      margin-top: 0rem;
-      color: var(--on-primary-container);
+      margin-top: 1rem;
+      color: var(--on-primary);
 
       &_title {
+         color: var(--on-primary);
          margin-left: -20vw;
+      }
+   }
+
+   &__content-text strong {
+      color: var(--on-tertiary-container);
+      opacity: 1;
+   }
+
+   &__content .description__content-text {
+      width: 88%;
+      strong {
+         color: var(--scrim);
+         opacity: 0.75;
       }
    }
 
@@ -1088,7 +1125,31 @@
       }
    }
 
+   @include mixins.viewport-md {
+      margin-top: 8vw;
+      padding: 8vw 0;
+      .section__title {
+         margin-bottom: 8vw;
+      }
+      &__conclusion {
+         &-gift {
+            width: 10vw;
+            height: 10vw;
+            right: 0;
+            bottom: -1rem;
+         }
+         &-item::before {
+            width: 6.5vw;
+            height: 6.5vw;
+         }
+      }
+   }
    @include mixins.viewport-lg {
+      &__content .description__content-text {
+         margin: 0 0 auto;
+         width: 100%;
+      }
+
       &__content {
          ul {
             margin: 0 auto;
@@ -1104,16 +1165,22 @@
                align-self: flex-start;
                border-width: 0.4rem;
             }
-         }
 
-         &-text {
-            margin: 0 0 auto;
+            p {
+               font-size: 1.6vw;
+            }
          }
 
          &-marker {
             position: absolute;
             right: 2rem;
             bottom: 2rem;
+         }
+      }
+      &__conclusion {
+         &-item::before {
+            width: 4vw;
+            height: 4vw;
          }
       }
    }
@@ -1147,15 +1214,16 @@
       }
    }
    @include mixins.viewport-xxl {
+      &__content .description__content-text {
+         font-size: 1.625rem;
+         max-width: 86%;
+      }
+
       &__content {
          &-marker {
             font-size: 2.125rem;
          }
 
-         &-text {
-            font-size: 1.625rem;
-            max-width: 86%;
-         }
          li {
             & > div {
                height: 18rem;
@@ -1167,7 +1235,7 @@
 }
 
 .testimonials {
-   padding-bottom: 10rem;
+   padding-bottom: 28vw;
    background: var(--surface-container-highest);
    background: linear-gradient(
       0deg,
@@ -1178,9 +1246,9 @@
    );
 
    li {
+      color: var(--inverse-surface);
       background-color: var(--surface-container-lowest);
       min-height: 40vw;
-      border-radius: 2rem;
       justify-content: stretch;
       align-items: flex-start;
    }
@@ -1205,6 +1273,7 @@
             min-height: 200px;
             height: auto;
             border-color: var(--tertiary-container);
+            border-color: rgba(0, 128, 0, 0.574);
          }
 
          div img {
@@ -1216,6 +1285,7 @@
 
          &:nth-child(2n) > div {
             border-color: var(--secondary-container);
+            border-color: rgba(0, 128, 0, 0.574);
          }
       }
 
@@ -1255,6 +1325,10 @@
             margin: 0 auto;
          }
       }
+   }
+
+   @include mixins.viewport-md {
+      padding-bottom: 10vw;
    }
 }
 
@@ -1299,8 +1373,8 @@
 
    &__item {
       text-align: left;
-      padding: 2rem;
-      border-radius: 4rem;
+      padding: 4.6vw 5vw;
+      border-radius: 30px;
       width: 100%;
       height: fit-content;
       color: var(--on-primary-container);
@@ -1338,8 +1412,8 @@
 
    &__expand {
       display: block;
-      width: 5rem;
-      height: 5rem;
+      width: 10.938vw;
+      height: 10.938vw;
       transition: 200ms;
 
       > svg {
@@ -1350,7 +1424,7 @@
    }
 
    &__title {
-      font-size: 4.688vw;
+      font-size: 4.288vw;
    }
 
    &__title,
@@ -1363,6 +1437,9 @@
    &__text {
       max-width: 87%;
       padding: 1rem 0;
+      & strong {
+         color: var(--on-primary-container);
+      }
    }
 
    @include mixins.viewport-xl {
