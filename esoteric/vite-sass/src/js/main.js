@@ -49,7 +49,7 @@ function topButtonShowHandler() {
    }
 
    if (bodyScrollTop > 1000 || documentScrollTop > 1000) {
-      topButton.style.display = 'block';
+      topButton.style.display = 'flex';
    } else {
       topButton.style.display = 'none';
    }
