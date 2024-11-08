@@ -335,37 +335,41 @@
       align-items: stretch;
 
       &__content {
-         margin-left: 5vw;
-         margin-top: auto;
-         margin-bottom: 10vw;
+         margin: auto 0 6vw 4vw;
       }
 
       &__info {
          justify-self: flex-end;
-         margin-left: auto;
-         margin-right: 5vw;
-         text-align: right;
-         width: unset;
+         margin: 3.4vw 0 0 auto;
+         width: 27.5vw;
+      }
+      &__text {
+         font-size: 1.25vw;
+         line-height: 1.2;
       }
       &__title {
          max-width: 48%;
-         line-height: 2.1rem;
+         font-size: 1.6vw;
+         line-height: 2.1vw;
       }
       &__subtitle {
          max-width: 65%;
-         font-size: 1.8rem;
+         font-size: 1.625vw;
       }
 
       &__description {
-         font-size: 3rem;
-         line-height: 3.2rem;
+         font-size: 3vw;
+         line-height: 3.2vw;
          max-width: 60%;
       }
       &__main {
          gap: 2rem;
       }
       &__button {
+         font-size: 1.4vw;
+         padding: 1.2vw 3vw;
          margin: 0.5rem 0;
+         border-radius: 1vw;
       }
    }
 }
@@ -464,14 +468,12 @@
    .section__title_title-colored {
       margin-left: unset;
    }
-
    &__list,
    &__item {
       display: flex;
       flex-direction: column;
       gap: 4rem;
    }
-
    &__item {
       width: 87.5vw;
       gap: 2rem;
@@ -510,7 +512,6 @@
          }
       }
    }
-
    @include mixins.viewport-md {
       &__item {
          width: 47vw;
@@ -543,24 +544,27 @@
          }
       }
    }
-
    @include mixins.viewport-xl {
       &__list {
          max-width: 87vw;
          gap: 5rem;
+         align-items: baseline;
+         margin-bottom: 10vw;
       }
 
       &__item {
          width: 32.5%;
-         margin: 0 5%;
+         margin: auto 3.5vw;
 
          &-image {
-            height: 15vw;
+            border-radius: 1.6vw;
+            height: 18.1vw;
          }
-
-         &:nth-child(2n) {
-            margin: 0 5%;
-         }
+      }
+   }
+   @include mixins.viewport-xxl {
+      &__list {
+         margin-bottom: 6vw;
       }
    }
 }
@@ -768,9 +772,6 @@
          }
       }
    }
-}
-
-.colored {
 }
 
 .testimonials,
@@ -1227,21 +1228,27 @@
    }
    @include mixins.viewport-xxl {
       &__content .description__content-text {
-         font-size: 1.625rem;
+         font-size: 1.32vw;
          max-width: 86%;
       }
 
       &__content {
          &-marker {
             font-size: 2.125rem;
+            right: 2vw;
+            bottom: 2vw;
          }
 
          li {
+            padding: 4vw 2.6vw 3.2vw;
             & > div {
-               height: 18rem;
-               width: 28rem;
+               height: 15vw;
+               width: 25vw;
             }
          }
+      }
+      &__conclusion-item {
+         padding: 0 4vw;
       }
    }
 }
