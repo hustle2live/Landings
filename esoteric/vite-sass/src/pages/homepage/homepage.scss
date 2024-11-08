@@ -610,16 +610,16 @@
                border-width: 0.35rem;
             }
             @include mixins.viewport-lg {
-               width: 20rem;
-               height: 22rem;
+               padding: 1.2vw;
+               padding-bottom: 5vw;
+               width: 24vw;
+               height: 27vw;
                transform: rotate(8deg);
                margin: auto;
                border-width: 0.4rem;
             }
             @include mixins.viewport-xl {
-               border-width: 0.5rem;
-               width: 30rem;
-               height: 32rem;
+               border-width: 0.3vw;
                margin: 5vw auto;
             }
          }
@@ -663,6 +663,14 @@
          @include mixins.viewport-xl {
             animation-duration: 3.2s;
          }
+         @include mixins.viewport-xxl {
+            svg {
+               width: 4.25vw;
+               height: 4.25vw;
+            }
+            top: -5.4vw;
+            left: -4vw;
+         }
       }
       &:last-child &__picture-bg_icon {
          left: -12rem;
@@ -683,16 +691,20 @@
             left: unset;
             top: -40%;
             right: -10vw;
-            transform: rotate(70deg) scale(1);
+            transform: rotate(70deg);
             animation: shake-right 2.8s ease-in-out infinite;
          }
-
          @include mixins.viewport-xl {
-            top: -17%;
-            right: -10vw;
+            top: -22%;
+            right: -12vw;
+         }
+         @include mixins.viewport-xxl {
+            svg {
+               width: 8vw;
+               height: 8vw;
+            }
          }
       }
-
       &:last-child &__picture-frame {
          margin-top: -20%;
          margin-left: auto;

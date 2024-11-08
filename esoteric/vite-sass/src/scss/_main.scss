@@ -229,13 +229,13 @@
 }
 @keyframes shake-right {
    0% {
-      transform: rotate(70deg) scale(1);
+      transform: rotate(70deg);
    }
    50% {
-      transform: rotate(96deg) scale(1);
+      transform: rotate(96deg);
    }
    100% {
-      transform: rotate(70deg) scale(1);
+      transform: rotate(70deg);
    }
 }
 
