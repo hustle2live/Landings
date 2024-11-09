@@ -74,9 +74,13 @@ function topButtonShowHandler() {
   const documentScrollTop = document.documentElement.scrollTop;
   const gettingDown = scrollPositionPrev < documentScrollTop;
   if ((bodyScrollTop > 600 || documentScrollTop > 600) && gettingDown) {
+    ctaSection.style.display = "flex";
     ctaSection.classList.remove("hidden");
   } else {
     ctaSection.classList.add("hidden");
+    setTimeout(() => {
+      ctaSection.style.display = "none";
+    }, 1e3);
   }
   if (bodyScrollTop > 1e3 || documentScrollTop > 1e3) {
     topButton.style.display = "flex";
