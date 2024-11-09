@@ -79,7 +79,7 @@ function topButtonShowHandler() {
     ctaSection.classList.add("hidden");
   }
   if (bodyScrollTop > 1e3 || documentScrollTop > 1e3) {
-    topButton.style.display = "block";
+    topButton.style.display = "flex";
   } else {
     topButton.style.display = "none";
   }
