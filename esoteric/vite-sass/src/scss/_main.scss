@@ -161,12 +161,17 @@
          width: 3vw;
       }
    }
+   @include mixins.viewport-xl {
+      bottom: 1vw;
+   }
    @include mixins.viewport-xxl {
-      bottom: 2.5vw;
-      padding: 1rem;
+      border-radius: 0.5vw;
+      height: 4vw;
+      width: 4vw;
+      bottom: 1.4vw;
       svg {
-         height: 3.2vw;
-         width: 3.2vw;
+         height: 2.2vw;
+         width: 2.2vw;
       }
    }
 }
@@ -175,16 +180,18 @@
    display: flex;
    align-items: center;
    opacity: 1;
-   position: sticky;
+   position: fixed;
    bottom: 0;
    width: 100%;
-   height: 22vw;
+   height: 12rem;
    border-radius: 2rem 2rem 0 0;
    text-align: center;
    background: var(--primary-container);
    margin-top: -2.25rem;
    transition: 650ms ease-in;
    z-index: 0;
+   box-shadow: 0 0 2rem 0.2rem rgba(0, 0, 0, 0.16);
+
    &.hidden {
       opacity: 0;
       transition: 650ms ease-in;
@@ -195,12 +202,21 @@
    &__button {
       height: auto;
       margin: auto;
-      padding: 3vw 5vw;
-      font-size: 3.4vw;
+      padding: 1.8rem 8%;
+      font-size: 1.8rem;
+      box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.46);
+
       color: var(--primary);
       font-weight: 600;
       border-radius: 1rem;
+      border-radius: 1.5rem;
+
       background: var(--surface-container-lowest);
+
+      span {
+         display: none;
+      }
+
       &:hover {
          background: var(--surface-container-low);
       }
@@ -211,8 +227,12 @@
    @include mixins.viewport-md {
       height: 12vw;
       &__button {
+         border-radius: 1.125rem;
          padding: 1.2rem 2.4rem;
          font-size: 2.4vw;
+         span {
+            display: inline;
+         }
       }
    }
    @include mixins.viewport-lg {
@@ -223,18 +243,20 @@
       }
    }
    @include mixins.viewport-xl {
-      height: 11vw;
+      height: 8vw;
       &__button {
-         padding: 1.4rem 4rem;
+         padding: 1rem 3rem;
          border-radius: 1rem;
+         font-size: 1.5vw;
       }
    }
    @include mixins.viewport-xxl {
-      height: 12vw;
+      border-radius: 2vw 2vw 0 0;
+      height: 7vw;
       &__button {
-         padding: 1.4vw 4vw;
+         padding: 0.8vw 3vw;
          border-radius: 1vw;
-         font-size: 1.8vw;
+         font-size: 1.25vw;
       }
    }
 }
@@ -261,7 +283,6 @@
       transform: rotate(70deg);
    }
 }
-
 @keyframes rise {
    0% {
       transform: translate(50%, 100%) scale(0);

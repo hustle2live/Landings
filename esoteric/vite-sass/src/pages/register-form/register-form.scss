@@ -13,8 +13,7 @@
    display: flex;
    box-sizing: border-box;
    flex-direction: column;
-   background: var(--surface-container);
-   background: var(--surface-bright);
+   background: light-dark(var(--surface-container-lowest), var(--surface-bright));
    border-radius: 3rem;
    color: var(--on-surface);
    gap: 3vw;
@@ -25,6 +24,15 @@
    align-items: center;
    box-shadow: 3rem 1rem 3rem 0 var(--scrim);
    z-index: 3;
+   &.hidden {
+      visibility: hidden;
+      z-index: -99;
+      .form__button-submit {
+         pointer-events: none;
+         background: var(--surface-container-highest);
+         color: var(--outline);
+      }
+   }
    &__heading {
       font-size: 5vw;
       font-weight: 600;
@@ -96,7 +104,7 @@
       border-radius: 0.4rem;
       overflow: hidden;
       svg rect {
-         fill: var(--surface);
+         fill: var(--surface-container-lowest);
       }
       svg path {
          stroke: var(--on-surface);
@@ -111,15 +119,6 @@
       }
       &:active {
          opacity: 0.9;
-      }
-   }
-   &.hidden {
-      visibility: hidden;
-      z-index: -99;
-      .form__button-submit {
-         pointer-events: none;
-         background: var(--surface-container-highest);
-         color: var(--outline);
       }
    }
    @include mixins.viewport-md {
@@ -189,56 +188,70 @@
       max-width: 80%;
       max-height: 98vh;
       &__heading {
-         font-size: 2.4vw;
+         font-size: 2vw;
       }
+      &__after-text,
       &__description p {
-         font-size: 1.8vw;
+         font-size: 1.3vw;
+         margin: 1vw 0;
       }
       .form {
+         margin: 0;
          &__button-submit,
          &__input {
-            width: 80%;
+            width: 60%;
+            font-size: 1.4vw;
          }
+         &__button-submit {
+            padding: 1vw;
+         }
+      }
+      .close-btn {
+         width: 3vw;
+         height: 3vw;
       }
    }
    @include mixins.viewport-xxl {
+      max-height: unset;
       max-width: unset;
       padding-bottom: 6vw;
       width: 75vw;
       gap: 1vw;
+      &__description {
+         width: 76%;
+      }
       &__heading {
          font-size: 1.8vw;
       }
-      &__after-text {
+      &__description p {
          font-size: 1.3vw;
+         margin: 0.5vw 0;
+      }
+      &__after-text {
+         width: 75%;
+         font-size: 1.2vw;
       }
       .form {
-         gap: 1.5vw;
+         gap: 1vw;
          &__button-submit {
-            padding: 0.8vw 3vw;
-            font-size: 1.5vw;
+            padding: 0.75vw;
+            font-size: 1.2vw;
             width: 60%;
             border-radius: 3vw;
             margin-top: 1vw;
          }
 
          &__input {
-            font-size: 1.4vw;
+            font-size: 1.2vw;
+            line-height: 1.4vw;
+            padding: 0.4vw;
             width: 60%;
          }
       }
 
-      &__after-text,
-      &__description {
-         max-width: 86%;
-         p {
-            font-size: 1.4vw;
-            margin: 0.75vw 0;
-         }
-      }
       .close-btn {
-         width: 3.6vw;
-         height: 3.6vw;
+         width: 2.3vw;
+         height: 2.3vw;
       }
    }
 }
