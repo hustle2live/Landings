@@ -1103,7 +1103,7 @@
 
    .section__title {
       margin-top: 1rem;
-      color: var(--on-primary);
+      color: var(--on-primary-container);
 
       &_title {
          color: var(--on-primary);
@@ -1150,6 +1150,7 @@
       }
 
       &-gift {
+         display: none;
          position: absolute;
          right: -1rem;
          bottom: -2rem;

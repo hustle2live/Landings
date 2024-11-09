@@ -733,7 +733,7 @@ a {
 
 .header {
   height: 200vw;
-  background-image: url("./IMG_8700.jpg");
+  background-image: url("./IMG_8700.webp");
   background-position: center 10%;
 }
 .header__main, .header__cta, .header__content, .header__info {
@@ -1285,6 +1285,11 @@ a {
   padding: 5vw 5vw 7vw;
   gap: 2.3rem;
 }
+.testimonials__content li:last-child > div > img,
+.description__content li:last-child > div > img {
+  -o-object-position: center top;
+     object-position: center top;
+}
 .testimonials__content li::before,
 .description__content li::before {
   display: none;
@@ -1341,7 +1346,7 @@ a {
   color: var(--on-primary);
 }
 .description .section__title_title {
-  color: var(--on-primary);
+  color: var(--on-primary-container);
   margin-left: -20vw;
 }
 .description__content-text strong {
@@ -1390,10 +1395,11 @@ a {
           transform: rotate(-4deg);
 }
 .description__conclusion-gift {
+  display: none;
   position: absolute;
   right: -1rem;
   bottom: -2rem;
-  content: url("./blue-gift-3.png");
+  content: url("./blue-gift-3.webp");
   width: 8rem;
   height: 8rem;
   -webkit-transform: rotate(10deg);
