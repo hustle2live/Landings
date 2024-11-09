@@ -1002,6 +1002,10 @@
          padding: 5vw 5vw 7vw;
          gap: 2.3rem;
 
+         &:last-child > div > img {
+            object-position: center top;
+         }
+
          &::before {
             display: none;
          }
