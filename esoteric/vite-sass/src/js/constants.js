@@ -8,11 +8,11 @@ export const STATUS_MESSAGE = {
    SENDING_ERROR: "User's registration Failed. Error"
 };
 
-const my_bot_token = '7942429140:AAEW-zohlci-fVpzUq7MS5IDvgm0jwHEbhk';
+const my_bot_token = '*****************';
 
-const sveta_chat_id = '461474441'; // Світлана Т.
+const sveta_chat_id = '****'; // Світлана Т.
 
-const vova_chat_id = '843486240'; // Володимир К.
+const vova_chat_id = '****'; // Володимир К.
 
 export const API_KEYS = {
    bot_token: my_bot_token,

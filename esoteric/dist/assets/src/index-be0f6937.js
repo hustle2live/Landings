@@ -110,8 +110,8 @@ const STATUS_MESSAGE = {
   NAME_ERROR: "Помилка заповнення. Ім'я може містити лише букви та деякі символи ( ' - . ) та має бути від 3х до 40 символів",
   SENDING_ERROR: "User's registration Failed. Error"
 };
-const my_bot_token = "7942429140:AAEW-zohlci-fVpzUq7MS5IDvgm0jwHEbhk";
-const vova_chat_id = "843486240";
+const my_bot_token = "*****************************";
+const vova_chat_id = "********";
 const API_KEYS = {
   bot_token: my_bot_token,
   chat_id: vova_chat_id
