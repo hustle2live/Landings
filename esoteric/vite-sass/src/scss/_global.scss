@@ -19,7 +19,11 @@ html {
 }
 
 .red {
-   color: red !important;
+   color: red;
+}
+
+.green {
+   color: green;
 }
 
 .colored {
@@ -102,4 +106,9 @@ a {
 button,
 a {
    cursor: pointer;
+}
+
+button:disabled {
+   background: gray !important;
+   pointer-events: none !important;
 }

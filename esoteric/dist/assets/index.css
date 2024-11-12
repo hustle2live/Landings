@@ -231,7 +231,11 @@ html {
 }
 
 .red {
-  color: red !important;
+  color: red;
+}
+
+.green {
+  color: green;
 }
 
 .colored {
@@ -299,6 +303,11 @@ a {
   cursor: pointer;
 }
 
+button:disabled {
+  background: gray !important;
+  pointer-events: none !important;
+}
+
 .wrapper {
   position: relative;
   text-align: center;
@@ -326,72 +335,61 @@ a {
   height: 100%;
 }
 
-.toggle_theme-btn,
-.top-btn {
-  position: absolute;
-  right: 5%;
-  font-size: 1.2rem;
-  font-weight: 600;
-  padding: 1rem;
-  color: var(--primary-container);
-  background-color: var(--on-primary-container);
-  width: auto;
-  cursor: pointer;
-  border: 2px solid var(--primary-container) !important;
-  -webkit-transition: 0.2s ease;
-  -moz-transition: 0.2s ease;
-  transition: 0.2s ease;
-  -webkit-box-shadow: 3px 4px 10px -4px var(--inverse-surface);
-          box-shadow: 3px 4px 10px -4px var(--inverse-surface);
+html .toggle_theme-btn > .sun-ico {
+  display: none;
 }
-.toggle_theme-btn:hover,
-.top-btn:hover {
-  opacity: 1;
+html .toggle_theme-btn > .night-ico {
+  display: block;
+}
+html .toggle_theme-btn .st0 {
+  fill: rgba(255, 255, 255, 0.891);
+  stroke: transparent;
+}
+
+html.dark .toggle_theme-btn > .sun-ico {
+  display: block;
+}
+html.dark .toggle_theme-btn > .night-ico {
+  display: none;
+}
+html.dark .toggle_theme-btn .st0 {
+  fill: transparent;
+  stroke: rgba(255, 255, 255, 0.891);
 }
 
 .toggle_theme-btn {
-  opacity: 0.3;
-  top: 1%;
-  right: unset;
-  border-top-right-radius: 3rem;
-  border-bottom-right-radius: 3rem;
-  width: 3.4rem;
-  min-width: 20px;
-  height: 40px;
+  position: absolute;
+  top: 3.5rem;
+  left: unset;
+  right: 4vw;
+  border: 0;
+  padding: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  width: 5vw;
+  height: 5vw;
+  cursor: pointer;
   overflow: hidden;
   white-space: nowrap;
-  text-align: right;
+  text-align: left;
+  -webkit-transform: rotate(10deg);
+     -moz-transform: rotate(10deg);
+      -ms-transform: rotate(10deg);
+          transform: rotate(10deg);
 }
-.toggle_theme-btn:not(:hover), .toggle_theme-btn:not(:active) {
-  font-size: 1.8rem;
-  padding-left: 0.2rem;
-}
-.toggle_theme-btn::before {
-  content: "@";
-}
-.toggle_theme-btn::after {
-  position: absolute;
-  display: block;
-  content: "";
+.toggle_theme-btn svg {
   width: 100%;
   height: 100%;
-  left: 0;
-  top: 0;
-  background: rgba(0, 0, 0, 0.15);
-}
-.toggle_theme-btn:hover::after, .toggle_theme-btn:active::after {
-  display: none;
-}
-.toggle_theme-btn:hover, .toggle_theme-btn:active {
-  width: 130px;
-  font-size: 1.2rem;
-  padding: 1rem;
-}
-.toggle_theme-btn:hover::before, .toggle_theme-btn:active::before {
-  content: "Switch Theme @";
 }
 
 .top-btn {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--primary-container);
+  cursor: pointer;
+  -webkit-transition: 0.2s ease;
+  -moz-transition: 0.2s ease;
+  transition: 0.2s ease;
   display: none;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
@@ -414,6 +412,9 @@ a {
   border-radius: 0.65rem;
   opacity: 0.4;
   z-index: 1;
+}
+.top-btn:hover {
+  opacity: 1;
 }
 .top-btn svg {
   margin: auto;
@@ -733,7 +734,7 @@ a {
 
 .header {
   height: 200vw;
-  background-image: url("./IMG_8700.webp");
+  background-image: url("./IMG_8700.jpg");
   background-position: center 10%;
 }
 .header__main, .header__cta, .header__content, .header__info {
@@ -1343,10 +1344,10 @@ a {
 }
 .description .section__title {
   margin-top: 1rem;
-  color: var(--on-primary);
+  color: var(--on-primary-container);
 }
 .description .section__title_title {
-  color: var(--on-primary-container);
+  color: var(--on-primary);
   margin-left: -20vw;
 }
 .description__content-text strong {
@@ -1399,7 +1400,7 @@ a {
   position: absolute;
   right: -1rem;
   bottom: -2rem;
-  content: url("./blue-gift-3.webp");
+  content: url("./blue-gift-3.png");
   width: 8rem;
   height: 8rem;
   -webkit-transform: rotate(10deg);
@@ -1815,6 +1816,13 @@ a {
   .wrapper-logo {
     width: 360px;
     height: 360px;
+  }
+  .toggle_theme-btn {
+    top: 3.5vw;
+    width: 2.3rem;
+    height: 2.3rem;
+    left: unset;
+    right: 5vw;
   }
   .top-btn {
     height: 4.2rem;
@@ -2397,20 +2405,6 @@ a {
   li {
     font-size: 1.25rem;
   }
-  .toggle_theme-btn:not(:hover), .toggle_theme-btn:not(:active) {
-    font-size: 1.4rem;
-    line-height: 1.2rem;
-    padding: 0rem 1rem 0.2rem 0;
-  }
-  .toggle_theme-btn {
-    font-size: 1rem;
-    padding: 0.5rem 1rem;
-  }
-  .toggle_theme-btn:hover, .toggle_theme-btn:active {
-    font-size: 1.25rem;
-    width: 200px;
-    padding: 0.5rem 1rem;
-  }
   .top-btn {
     bottom: 1vw;
   }
@@ -2596,6 +2590,11 @@ a {
   .title,
   .section__title_title {
     font-size: 3.73vw;
+  }
+  .toggle_theme-btn {
+    right: 2.5vw;
+    width: 2.3vw;
+    height: 2.3vw;
   }
   .top-btn {
     border-radius: 0.5vw;

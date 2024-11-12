@@ -26,93 +26,79 @@
    }
 }
 
-.toggle_theme-btn,
-.top-btn {
-   position: absolute;
-   right: 5%;
-   font-size: 1.2rem;
-   font-weight: 600;
-   padding: 1rem;
-   color: var(--primary-container);
-   background-color: var(--on-primary-container);
-   width: auto;
-   cursor: pointer;
-   border: 2px solid var(--primary-container) !important;
-   transition: 0.2s ease;
-   box-shadow: 3px 4px 10px -4px var(--inverse-surface);
-   &:hover {
-      opacity: 1;
+html .toggle_theme-btn {
+   & > .sun-ico {
+      display: none;
+   }
+   & > .night-ico {
+      display: block;
+   }
+   .st0 {
+      fill: rgba(255, 255, 255, 0.891);
+      stroke: transparent;
+   }
+}
+
+html.dark .toggle_theme-btn {
+   & > .sun-ico {
+      display: block;
+   }
+   & > .night-ico {
+      display: none;
+   }
+   .st0 {
+      fill: transparent;
+      stroke: rgba(255, 255, 255, 0.891);
    }
 }
 
 .toggle_theme-btn {
-   opacity: 0.3;
-   top: 1%;
-   right: unset;
-   border-top-right-radius: 3rem;
-   border-bottom-right-radius: 3rem;
-   width: 3.4rem;
-   min-width: 20px;
-   height: 40px;
+   position: absolute;
+   top: 3.5rem;
+   left: unset;
+   right: 4vw;
+   border: 0;
+   padding: 0;
+   box-shadow: none;
+   width: 5vw;
+   height: 5vw;
+   cursor: pointer;
    overflow: hidden;
    white-space: nowrap;
-   text-align: right;
+   text-align: left;
 
-   &:not(:hover),
-   &:not(:active) {
-      font-size: 1.8rem;
-      padding-left: 0.2rem;
-      @include mixins.viewport-xl {
-         font-size: 1.4rem;
-         line-height: 1.2rem;
-         padding: 0rem 1rem 0.2rem 0;
-      }
-   }
+   transform: rotate(10deg);
 
-   &::before {
-      content: '@';
-   }
-
-   &::after {
-      position: absolute;
-      display: block;
-      content: '';
+   svg {
       width: 100%;
       height: 100%;
-      left: 0;
-      top: 0;
-      background: rgba($color: #000000, $alpha: 0.15);
    }
 
-   &:hover::after,
-   &:active::after {
-      display: none;
+   @include mixins.viewport-md {
+      top: 3.5vw;
+      width: 2.3rem;
+      height: 2.3rem;
+
+      left: unset;
+      right: 5vw;
    }
-
-   &:hover,
-   &:active {
-      width: 130px;
-      font-size: 1.2rem;
-      padding: 1rem;
-      &::before {
-         content: 'Switch Theme @';
-      }
-   }
-
-   @include mixins.viewport-xl {
-      font-size: 1rem;
-      padding: 0.5rem 1rem;
-
-      &:hover,
-      &:active {
-         font-size: 1.25rem;
-         width: 200px;
-         padding: 0.5rem 1rem;
-      }
+   @include mixins.viewport-xxl {
+      right: 2.5vw;
+      width: 2.3vw;
+      height: 2.3vw;
    }
 }
 
 .top-btn {
+   font-size: 1.2rem;
+   font-weight: 600;
+   color: var(--primary-container);
+   cursor: pointer;
+   transition: 0.2s ease;
+   &:hover {
+      opacity: 1;
+   }
+
    display: none;
    justify-content: center;
    align-items: center;
