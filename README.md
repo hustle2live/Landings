@@ -1,13 +1,25 @@
-There are some Landing Pages developed with `HTML5, CSS3, SCSS, Gulp` : 
 
+### Some of my Websites
 
-1. [Space Research center ](https://hustle2live.github.io/Landings/space)(responsive)
+<hr />
 
-2. [Accounting ](https://hustle2live.github.io/Landings/accounting)(responsive)
+Stack: `HTML5, CSS3, Javascript, SASS/SCSS, Gulp, Vite, and etc.`
 
-3. [IPTV Services ](https://hustle2live.github.io/Landings/cinema)(mobile) 
+#### Landing Page Templates:
 
-4. [Catadamy ](https://cat-landing.netlify.app/)(responsive) | 
+1. [Catadamy ](https://cat-landing.netlify.app/)(responsive)
 
+2. [IPTV Services ](https://hustle2live.github.io/Landings/cinema)(mobile only)
 
-5. [Workshop intensive ](https://hustle2live.github.io/Landings/esoteric/dist/)(`in-progress`)
+3. [Accounting ](https://hustle2live.github.io/Landings/accounting)(responsive)
+
+4. [Space Research center ](https://hustle2live.github.io/Landings/space)(responsive)
+
+#### Projects:
+
+1. [Taro course ](https://taro-kliuchsveta.com/)(responsive)
+
+2. [HVAC Services ](https://test.argo-e.com.ua/)(responsive)
+
+3. [CAR selection Services ](https://www.revizoravto.com.ua/)(responsive)
+
