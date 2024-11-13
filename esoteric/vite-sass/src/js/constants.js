@@ -10,13 +10,11 @@ export const STATUS_MESSAGE = {
 
 const my_bot_token = '*****************';
 
-const sveta_chat_id = '****'; // Світлана Т.
-
-const vova_chat_id = '****'; // Володимир К.
+const my_chat_id = '****';
 
 export const API_KEYS = {
    bot_token: my_bot_token,
-   chat_id: vova_chat_id
+   chat_id: my_chat_id
 };
 
 // const bot_token = process.env.BOT_TOKEN
