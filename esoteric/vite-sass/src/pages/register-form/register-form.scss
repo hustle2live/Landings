@@ -121,6 +121,7 @@
          opacity: 0.9;
       }
    }
+
    @include mixins.viewport-md {
       width: 80vw;
       padding: 6vw 4vw;

@@ -1,0 +1,34 @@
+#payment-success {
+   background: var(--primary);
+
+   .form-wrapper {
+      box-shadow: 0rem 0rem 0rem 3rem var(--on-primary);
+      box-shadow: none;
+   }
+
+   p {
+      margin: 10px 0;
+   }
+
+   .telegram-ico {
+      width: auto;
+      height: auto;
+      min-width: 24px;
+      min-height: 24px;
+   }
+
+   .cls-1 {
+      fill: var(--on-primary);
+      stroke: var(--scrim);
+      stroke-linecap: round;
+      stroke-linejoin: round;
+   }
+
+   .form__button-submit {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+      margin: 1rem auto;
+   }
+}

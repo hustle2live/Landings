@@ -8,14 +8,14 @@ export const STATUS_MESSAGE = {
    SENDING_ERROR: "User's registration Failed. Error"
 };
 
-const my_bot_token = '*****************';
+const my_bot_token = '************';
 
-const my_chat_id = '****';
+const my_chat_id = '*******';
 
 export const API_KEYS = {
    bot_token: my_bot_token,
    chat_id: my_chat_id
 };
 
-// const bot_token = process.env.BOT_TOKEN
-// const chat_id = process.env.CHAT_ID;
+export const paymentURL = '***********';
+

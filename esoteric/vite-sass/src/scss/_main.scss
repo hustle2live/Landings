@@ -181,6 +181,7 @@ html.dark .toggle_theme-btn {
    &.hidden {
       opacity: 0;
       transition: 650ms ease-in;
+      z-index: -1;
       .cta__button {
          pointer-events: none !important;
       }

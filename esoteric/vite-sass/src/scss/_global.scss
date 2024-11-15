@@ -19,11 +19,16 @@ html {
 }
 
 .red {
-   color: red;
+   color: red !important;
 }
 
 .green {
-   color: green;
+   color: green !important;
+}
+
+.inline {
+   font-size: inherit;
+   display: inline;
 }
 
 .colored {

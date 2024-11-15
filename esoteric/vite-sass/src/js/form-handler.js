@@ -1,5 +1,5 @@
 import { postFeedback } from './api.js';
-import { API_KEYS, STATUS_MESSAGE } from './constants.js';
+import { API_KEYS, paymentURL, STATUS_MESSAGE } from './constants.js';
 import { createChatBotDataMap } from './bot-message-formatter.js';
 import { showMessage } from './status-notifier.js';
 import { validateFields } from './validator.js';
@@ -48,6 +48,8 @@ const hadleSubmit = (e) => {
    showMessage();
    const formattedDataMap = createChatBotDataMap(formData);
    hadleDataSend(formattedDataMap);
+
+   window.open(paymentURL);
 };
 
 feedbackForm.addEventListener('submit', (e) => hadleSubmit(e));
