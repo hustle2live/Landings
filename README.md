@@ -81,5 +81,5 @@
     .icon-container {
         display: flex;
         gap: 10px;
-    };
+    }
 </style>
