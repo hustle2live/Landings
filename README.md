@@ -5,7 +5,16 @@
 
 Stack: `HTML5, CSS3, Javascript, SASS/SCSS, Gulp, Vite, and etc.`
 
-#### Landing Page Templates:
+#### Projects:
+
+1. [Taro course ](https://taro-kliuchsveta.com/)(responsive)
+
+2. [HVAC Services ](https://test.argo-e.com.ua/)(responsive)
+
+3. [CAR selection Services ](https://www.revizoravto.com.ua/)(responsive)
+
+   
+#### Landing Pages (Non-commercial practice):
 
 1. [Catadamy ](https://cat-landing.netlify.app/)(responsive)
 
@@ -15,11 +24,5 @@ Stack: `HTML5, CSS3, Javascript, SASS/SCSS, Gulp, Vite, and etc.`
 
 4. [Space Research center ](https://hustle2live.github.io/Landings/space)(responsive)
 
-#### Projects:
 
-1. [Taro course ](https://taro-kliuchsveta.com/)(responsive)
-
-2. [HVAC Services ](https://test.argo-e.com.ua/)(responsive)
-
-3. [CAR selection Services ](https://www.revizoravto.com.ua/)(responsive)
 
