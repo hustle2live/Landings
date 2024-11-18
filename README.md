@@ -1,21 +1,20 @@
 <div class="content">
 
-<h3> <span class="title">My Portfolio</span></h3>
-<br />
-<hr />
-<br />
+### <span class="title">My Portfolio</span>
+
+##
 
 <span class="title">Stack:</span> <span class="icon-text">`JavaScript, HTML5/CSS3, SASS/SCSS, Gulp, Vite, Telegram API, Observer JS, BEM, Google Material Web`</span>
 
-<h4><span class="title">Projects:</span></h4>
+#### <span class="title">Projects:</span>
 
-1. [Esoteric course ](https://taro-kliuchsveta.com/)(responsive)
+1. [Taro course ](https://taro-kliuchsveta.com/)(responsive)
 
 2. [HVAC Services ](https://test.argo-e.com.ua/)(responsive)
 
 3. [CAR selection Services ](https://www.revizoravto.com.ua/)(responsive)
 
-<h4><span class="title">Landing Pages</span> (Non-commercial practice):</h4>
+#### <span class="title">Landing Pages</span> (Non-commercial practice):
 
 1. [Catadamy ](https://cat-landing.netlify.app/)(responsive)
 
@@ -25,9 +24,7 @@
 
 4. [Space Research center ](https://hustle2live.github.io/Landings/space)(responsive)
 
-<br />
-<hr />
-<br />
+##
 
 <div class="icon-container">
    <a class="icon-link" href="https://github.com/hustle2live" target="_blank">
@@ -52,11 +49,10 @@
     }
     body {
         background: lightgray;
-        background-image: url('./images/background/colour-4159771_1920.jpg');
-        background-image: url('./images/background/color-4158152_1920.jpg');
         background-image: url('./images/background/color-7543677_1920.jpg');
+        background-image: url('./images/background/color-4158152_1920.jpg');
+        background-image: url('./images/background/colour-4159771_1920.jpg');
         position: relative;
-        min-height: 100vh;
         color: #e9e9e9;
     }
     a {
@@ -68,17 +64,12 @@
     .content {
         box-sizing: border-box;
         background: transparent;
-        background: rgba(255, 255, 255, 0.4);
         padding: 10vw;
-        backdrop-filter: blur(20px);
+        backdrop-filter: blur(60px);
         top: 4%;
         left: 4vw;
         min-height: 92%;
         min-width: 92vw;
-        top: 0;
-        left: 0;
-        min-height: 100%;
-        min-width: 100vw;
         position: fixed;
     }
     .icon-container {
