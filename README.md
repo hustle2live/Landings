@@ -1,12 +1,13 @@
 <div class="content">
 
-### <span class="title">My Portfolio</span>
-
-##
+<h3> <span class="title">My Portfolio</span></h3>
+<br />
+<hr />
+<br />
 
 <span class="title">Stack:</span> <span class="icon-text">`JavaScript, HTML5/CSS3, SASS/SCSS, Gulp, Vite, Telegram API, Observer JS, BEM, Google Material Web`</span>
 
-#### <span class="title">Projects:</span>
+<h4><span class="title">Projects:</span></h4>
 
 1. [Esoteric course ](https://taro-kliuchsveta.com/)(responsive)
 
@@ -14,7 +15,7 @@
 
 3. [CAR selection Services ](https://www.revizoravto.com.ua/)(responsive)
 
-#### <span class="title">Landing Pages</span> (Non-commercial practice):
+<h4><span class="title">Landing Pages</span> (Non-commercial practice):</h4>
 
 1. [Catadamy ](https://cat-landing.netlify.app/)(responsive)
 
@@ -24,7 +25,9 @@
 
 4. [Space Research center ](https://hustle2live.github.io/Landings/space)(responsive)
 
-##
+<br />
+<hr />
+<br />
 
 <div class="icon-container">
    <a class="icon-link" href="https://github.com/hustle2live" target="_blank">
