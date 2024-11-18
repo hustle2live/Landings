@@ -3,7 +3,7 @@
 
 <hr />
 
-Stack: `HTML5, CSS3, Javascript, SASS/SCSS, Gulp, Vite, and etc.`
+__Stack:__ `JavaScript, HTML5/CSS3, SASS/SCSS, Gulp, Vite, Telegram API, Observer JS, BEM, Google Material Web`
 
 #### Projects:
 
