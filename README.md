@@ -13,7 +13,7 @@ __Stack:__ `JavaScript, HTML5/CSS3, SASS/SCSS, Gulp, Vite, Telegram API, Observe
 
 3. [CAR selection Services ](https://www.revizoravto.com.ua/)(responsive)
 
-   
+
 #### Landing Pages (Non-commercial practice):
 
 1. [Catadamy ](https://cat-landing.netlify.app/)(responsive)
@@ -24,5 +24,9 @@ __Stack:__ `JavaScript, HTML5/CSS3, SASS/SCSS, Gulp, Vite, Telegram API, Observe
 
 4. [Space Research center ](https://hustle2live.github.io/Landings/space)(responsive)
 
+##
 
+[<img src="./icons/social/github.ico" alt="github" title="my github" width="24" height="24">](https://github.com/hustle2live)
+[<img src="./icons/social/telegram-circle.png" alt="telegram" title="my telegram" width="24" height="24">](https://github.com/hustle2live)
+[<img src="./icons/social/facebook-circle.png" alt="telegram" title="my facebook" width="24" height="24">](https://github.com/hustle2live)
 
