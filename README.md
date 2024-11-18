@@ -1,20 +1,20 @@
+<div class="content">
 
-### Portfolio
+### <span class="title">My Portfolio</span>
 
-<hr />
+##
 
-__Stack:__ `JavaScript, HTML5/CSS3, SASS/SCSS, Gulp, Vite, Telegram API, Observer JS, BEM, Google Material Web`
+<span class="title">Stack:</span> <span class="icon-text">`JavaScript, HTML5/CSS3, SASS/SCSS, Gulp, Vite, Telegram API, Observer JS, BEM, Google Material Web`</span>
 
-#### Projects:
+#### <span class="title">Projects:</span>
 
-1. [Taro course ](https://taro-kliuchsveta.com/)(responsive)
+1. [Esoteric course ](https://taro-kliuchsveta.com/)(responsive)
 
 2. [HVAC Services ](https://test.argo-e.com.ua/)(responsive)
 
 3. [CAR selection Services ](https://www.revizoravto.com.ua/)(responsive)
 
-
-#### Landing Pages (Non-commercial practice):
+#### <span class="title">Landing Pages</span> (Non-commercial practice):
 
 1. [Catadamy ](https://cat-landing.netlify.app/)(responsive)
 
@@ -26,7 +26,60 @@ __Stack:__ `JavaScript, HTML5/CSS3, SASS/SCSS, Gulp, Vite, Telegram API, Observe
 
 ##
 
-[<img src="./icons/social/github.ico" alt="github" title="my github" width="24" height="24">](https://github.com/hustle2live)
-[<img src="./icons/social/telegram-circle.png" alt="telegram" title="my telegram" width="24" height="24">](https://github.com/hustle2live)
-[<img src="./icons/social/facebook-circle.png" alt="telegram" title="my facebook" width="24" height="24">](https://github.com/hustle2live)
+<div class="icon-container">
+   <a class="icon-link" href="https://github.com/hustle2live" target="_blank">
+   <img src="./images/icons/social/github.ico" alt="github" title="view my github page" width="24" height="24" style="border-radius:50%">
+   </a>
+   <a class="icon-link" href="https://github.com/hustle2live" target="_blank">
+   <img src="./images/icons/social/facebook-circle.png" alt="telegram" title="view my facebook page" width="24" height="24">
+   </a>
+   <a class="icon-link" href="https://github.com/hustle2live" target="_blank">
+   <img src="./images/icons/social/telegram-circle.png" alt="telegram" title="write me to telegram" width="24" height="24">
+   </a>
+</div>
+</span>
 
+<style>
+    html {
+        scrollbar-width: none;
+    }
+    .title {
+    font-weight: bold;
+    color: #ffffff;
+    }
+    body {
+        background: lightgray;
+        background-image: url('./images/background/colour-4159771_1920.jpg');
+        background-image: url('./images/background/color-4158152_1920.jpg');
+        background-image: url('./images/background/color-7543677_1920.jpg');
+        position: relative;
+        min-height: 100vh;
+        color: #e9e9e9;
+    }
+    a {
+        font-weight: 700;
+    }
+    .icon-text {
+        background-color: white;
+    }
+    .content {
+        box-sizing: border-box;
+        background: transparent;
+        background: rgba(255, 255, 255, 0.4);
+        padding: 10vw;
+        backdrop-filter: blur(20px);
+        top: 4%;
+        left: 4vw;
+        min-height: 92%;
+        min-width: 92vw;
+        top: 0;
+        left: 0;
+        min-height: 100%;
+        min-width: 100vw;
+        position: fixed;
+    }
+    .icon-container {
+        display: flex;
+        gap: 10px;
+    };
+</style>
