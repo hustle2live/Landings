@@ -83,6 +83,7 @@
             display: flex;
             flex-wrap: wrap;
             position: fixed;
+            justify-content: space-around;
             top: 2.5vh;
             left: 2.5vw;
             height: 95vh;
@@ -98,7 +99,7 @@
          }
 
          .main {
-            width: 60%;
+            width: 50%;
          }
 
          .website-preview {
@@ -198,6 +199,31 @@
             }
             to {
                background-position: center 100%;
+            }
+         }
+
+         @media screen and (max-width: 1200px) {
+            .main {
+               width: 45%;
+            }
+            .content {
+               justify-content: space-between;
+            }
+         }
+         @media screen and (max-width: 768px) {
+            .main {
+               width: auto;
+            }
+            .website-preview {
+               max-height: 90vh;
+            }
+         }
+         @media screen and (max-width: 425px) {
+            .content {
+               justify-content: center;
+            }
+            .website-preview {
+               margin: 0 -20px -20px;
             }
          }
       </style>
@@ -338,7 +364,12 @@
                }
             });
             link.addEventListener('click', function (e) {
-               window.open(this.href, '_blank');
+               e.preventDefault();
+               console.log(window.screen.width);
+               if (window.screen.width > 768) {
+                  window.open(this.href, '_blank');
+               }
+
                e.stopPropagation();
             });
          });
