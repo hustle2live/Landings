@@ -162,15 +162,8 @@
             gap: 10px;
          }
 
-         .openlink {
-            display: inline-block;
-            height: 18px;
-            width: auto;
-            text-decoration: underline;
-         }
-
-         .openlink img {
-            max-height: 100%;
+         .webLink img {
+            max-height: 18px;
          }
 
          .unclickable {
@@ -252,19 +245,19 @@
                <li>
                   <a class="webLink" href="https://taro-kliuchsveta.com/" target="_blank">
                      <span class="unclickable"> Taro Esoteric course (responsive)</span>
-                     <span class="openlink">link <img src="./images/icons/openlink/2990159.png" alt="link" /></span>
+                     <img src="./images/icons/openlink/2990159.png" alt="link" />
                   </a>
                </li>
                <li>
                   <a class="webLink" href="https://hustle2live.github.io/ARGO-E-landing-page/" target="_blank">
                      <span class="unclickable"> HVAC Services (responsive)</span>
-                     <span class="openlink">link <img src="./images/icons/openlink/2990159.png" alt="link" /></span>
+                     <img src="./images/icons/openlink/2990159.png" alt="link" />
                   </a>
                </li>
                <li>
                   <a class="webLink" href="https://revizoravto.com.ua/" target="_blank">
                      <span class="unclickable"> CAR selection Services (responsive)</span>
-                     <span class="openlink">link <img src="./images/icons/openlink/2990159.png" alt="link" /></span>
+                     <img src="./images/icons/openlink/2990159.png" alt="link" />
                   </a>
                </li>
             </ol>
@@ -274,25 +267,25 @@
                <li>
                   <a class="webLink" href="https://cat-landing.netlify.app/" target="_blank">
                      <span class="unclickable"> Catadamy (responsive)</span>
-                     <span class="openlink">link <img src="./images/icons/openlink/2990159.png" alt="link" /></span>
+                     <img src="./images/icons/openlink/2990159.png" alt="link" />
                   </a>
                </li>
                <li>
                   <a class="webLink" href="https://hustle2live.github.io/Landings/cinema" target="_blank">
                      <span class="unclickable"> IPTV Services (mobile only)</span>
-                     <span class="openlink">link <img src="./images/icons/openlink/2990159.png" alt="link" /></span>
+                     <img src="./images/icons/openlink/2990159.png" alt="link" />
                   </a>
                </li>
                <li>
                   <a class="webLink" href="https://hustle2live.github.io/Landings/accounting" target="_blank">
                      <span class="unclickable"> Accounting (responsive)</span>
-                     <span class="openlink">link <img src="./images/icons/openlink/2990159.png" alt="link" /></span>
+                     <img src="./images/icons/openlink/2990159.png" alt="link" />
                   </a>
                </li>
                <li>
                   <a class="webLink" href="https://hustle2live.github.io/Landings/space" target="_blank">
                      <span class="unclickable"> Space Research center (responsive)</span>
-                     <span class="openlink">link <img src="./images/icons/openlink/2990159.png" alt="link" /></span>
+                     <img src="./images/icons/openlink/2990159.png" alt="link" />
                   </a>
                </li>
             </ol>
@@ -356,7 +349,7 @@
          const deskStyles = { width: '1920px', height: '500%', transform: 'scale(calc(1 / 5))' };
 
          allWebLinks.forEach((link) => {
-            link.addEventListener('mouseover', function () {
+            link.addEventListener('mouseover', function (e) {
                try {
                   previewContainer.setAttribute('src', this.href);
                } catch (error) {
