@@ -27,14 +27,13 @@
 ##
 
 <div class="icon-container">
-   <a class="icon-link" href="https://github.com/hustle2live" target="_blank">
+   <a class="icon-link" href="https://github.com/hustle2live" target="_blank" style="text-decoration:none">
    <img src="./images/icons/social/github.ico" alt="github" title="view my github page" width="24" height="24">
    </a>
-   <a class="icon-link" href="https://github.com/hustle2live" target="_blank">
+   <a class="icon-link" href="https://github.com/hustle2live" target="_blank" style="text-decoration:none">
    <img src="./images/icons/social/facebook-circle.png" alt="telegram" title="view my facebook page" width="24" height="24">
    </a>
-   <a class="icon-link" href="https://github.com/hustle2live" target="_blank">
+   <a class="icon-link" href="https://github.com/hustle2live" target="_blank" style="text-decoration:none">
    <img src="./images/icons/social/telegram-circle.png" alt="telegram" title="write me to telegram" width="24" height="24">
    </a>
 </div>
-
