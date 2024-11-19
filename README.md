@@ -28,7 +28,7 @@
 
 <div class="icon-container">
    <a class="icon-link" href="https://github.com/hustle2live" target="_blank">
-   <img src="./images/icons/social/github.ico" alt="github" title="view my github page" width="24" height="24" style="border-radius:50%">
+   <img src="./images/icons/social/github.ico" alt="github" title="view my github page" width="24" height="24">
    </a>
    <a class="icon-link" href="https://github.com/hustle2live" target="_blank">
    <img src="./images/icons/social/facebook-circle.png" alt="telegram" title="view my facebook page" width="24" height="24">
@@ -37,43 +37,4 @@
    <img src="./images/icons/social/telegram-circle.png" alt="telegram" title="write me to telegram" width="24" height="24">
    </a>
 </div>
-</span>
 
-<style>
-    html {
-        scrollbar-width: none;
-    }
-    .title {
-    font-weight: bold;
-    color: #ffffff;
-    }
-    body {
-        background: lightgray;
-        background-image: url('./images/background/color-7543677_1920.jpg');
-        background-image: url('./images/background/color-4158152_1920.jpg');
-        background-image: url('./images/background/colour-4159771_1920.jpg');
-        position: relative;
-        color: #e9e9e9;
-    }
-    a {
-        font-weight: 700;
-    }
-    .icon-text {
-        background-color: white;
-    }
-    .content {
-        box-sizing: border-box;
-        background: transparent;
-        padding: 10vw;
-        backdrop-filter: blur(60px);
-        top: 4%;
-        left: 4vw;
-        min-height: 92%;
-        min-width: 92vw;
-        position: fixed;
-    }
-    .icon-container {
-        display: flex;
-        gap: 10px;
-    }
-</style>

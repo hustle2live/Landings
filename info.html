@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Developers Portfolio - Volodymyr Kuznietsov, Kyiv, Ukraine</title>
+      <style type="text/css">
+         @font-face {
+            font-family: 'Montserrat';
+            src: url('./assets/fonts/Montserrat/Montserrat-Regular.ttf') format('truetype');
+            font-weight: 400;
+            font-display: swap;
+         }
+         @font-face {
+            font-family: 'Montserrat';
+            src: url('./assets/fonts/Montserrat/Montserrat-SemiBold.ttf') format('truetype');
+            font-weight: 600;
+            font-display: swap;
+         }
+
+         html {
+            scrollbar-width: none;
+            scroll-behavior: smooth;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 15px;
+         }
+
+         .title {
+            font-weight: bold;
+            color: #ffffff;
+         }
+
+         body {
+            display: block;
+            position: relative;
+            background: #e9e9e9;
+            color: #e9e9e9;
+         }
+
+         body,
+         html {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            height: 100vh;
+         }
+
+         p {
+            margin: 4px 0;
+         }
+
+         li {
+            margin: 10px 0;
+         }
+
+         a {
+            font-weight: 700;
+         }
+
+         .icon-text {
+            background-color: white;
+            color: rgb(13, 48, 94);
+         }
+
+         .icon-link img {
+            border-radius: 50%;
+         }
+
+         .webLink.orange {
+            color: orange;
+         }
+         .webLink.orange:hover {
+            color: rgb(253, 185, 59);
+         }
+         .webLink {
+            color: rgb(126, 170, 219);
+         }
+         .webLink:hover {
+            color: rgb(145, 191, 243);
+         }
+
+         .content {
+            display: flex;
+            flex-wrap: wrap;
+            position: fixed;
+            top: 2.5vh;
+            left: 2.5vw;
+            height: 95vh;
+            max-height: 95vh;
+            overflow: scroll;
+            width: 95vw;
+            gap: 5%;
+            box-sizing: border-box;
+            background: transparent;
+            padding: 4vw;
+            backdrop-filter: blur(100px);
+            scrollbar-width: none;
+         }
+
+         .main {
+            width: 60%;
+         }
+
+         .website-preview {
+            position: relative;
+            display: block;
+            padding: 0;
+            margin-top: 0;
+            padding-top: 70px;
+            overflow: hidden;
+            content: '';
+            width: 384px;
+            min-height: 96%;
+            height: 96%;
+            box-sizing: border-box;
+         }
+
+         .website-preview > iframe {
+            min-width: 100%;
+            min-height: 100%;
+            transform-origin: 0 0;
+            width: 1920px;
+            height: 500%;
+            transform: scale(calc(1 / 5));
+            width: 450px;
+            height: 119%;
+            transform: scale(calc(384 / 450));
+         }
+
+         .website-preview,
+         .website-preview > iframe {
+            border: 4px solid;
+            border-color: transparent;
+            border-color: rgba(255, 255, 255, 0.15);
+         }
+
+         .website-preview > div.icons {
+            height: 60px;
+            width: 120px;
+            display: flex;
+            gap: 10px;
+            position: absolute;
+            top: 5px;
+            left: 50%;
+            transform: translateX(-50%);
+            cursor: pointer;
+         }
+
+         .btn-responce.active {
+            background: #e9e9e9;
+         }
+
+         .btn-responce {
+            display: block;
+            height: 100%;
+            width: 40%;
+         }
+
+         .icon-container {
+            display: flex;
+            gap: 10px;
+         }
+
+         .openlink {
+            display: inline-block;
+            height: 18px;
+            width: auto;
+            text-decoration: underline;
+         }
+
+         .openlink img {
+            max-height: 100%;
+         }
+
+         .unclickable {
+            pointer-events: none;
+            text-decoration: none;
+         }
+
+         .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('./images/background/6.jpg');
+            background-image: url('./images/background/2.jpg');
+            background-image: url('./images/background/1.jpg');
+            background-size: cover;
+            background-repeat: repeat-y;
+            background-position: center 0;
+            animation: scrollBackground 70s linear infinite;
+         }
+
+         @keyframes scrollBackground {
+            from {
+               background-position: center 0;
+            }
+            to {
+               background-position: center 100%;
+            }
+         }
+      </style>
+   </head>
+
+   <body>
+      <div class="background"></div>
+      <div class="content">
+         <div class="main">
+            <h2><span class="title">My Portfolio</span> - Volodymyr Kuznietsov</h2>
+            <div>
+               <p class="title">
+                  Stack:
+                  <span class="icon-text">
+                     &nbsp; JavaScript, HTML5/CSS3, SASS/SCSS, Gulp, Vite, Telegram API, Observer JS, BEM, Google
+                     Material Web &nbsp;
+                  </span>
+               </p>
+            </div>
+
+            <br />
+            <hr />
+
+            <h4><span class="title">Projects:</span></h4>
+            <ol>
+               <li>
+                  <a class="webLink" href="https://taro-kliuchsveta.com/" target="_blank">
+                     <span class="unclickable"> Taro Esoteric course (responsive)</span>
+                     <span class="openlink">link <img src="./images/icons/openlink/2990159.png" alt="link" /></span>
+                  </a>
+               </li>
+               <li>
+                  <a class="webLink" href="https://hustle2live.github.io/ARGO-E-landing-page/" target="_blank">
+                     <span class="unclickable"> HVAC Services (responsive)</span>
+                     <span class="openlink">link <img src="./images/icons/openlink/2990159.png" alt="link" /></span>
+                  </a>
+               </li>
+               <li>
+                  <a class="webLink" href="https://revizoravto.com.ua/" target="_blank">
+                     <span class="unclickable"> CAR selection Services (responsive)</span>
+                     <span class="openlink">link <img src="./images/icons/openlink/2990159.png" alt="link" /></span>
+                  </a>
+               </li>
+            </ol>
+
+            <h4><span class="title">Landing Pages</span> (Non-commercial practice):</h4>
+            <ol>
+               <li>
+                  <a class="webLink" href="https://cat-landing.netlify.app/" target="_blank">
+                     <span class="unclickable"> Catadamy (responsive)</span>
+                     <span class="openlink">link <img src="./images/icons/openlink/2990159.png" alt="link" /></span>
+                  </a>
+               </li>
+               <li>
+                  <a class="webLink" href="https://hustle2live.github.io/Landings/cinema" target="_blank">
+                     <span class="unclickable"> IPTV Services (mobile only)</span>
+                     <span class="openlink">link <img src="./images/icons/openlink/2990159.png" alt="link" /></span>
+                  </a>
+               </li>
+               <li>
+                  <a class="webLink" href="https://hustle2live.github.io/Landings/accounting" target="_blank">
+                     <span class="unclickable"> Accounting (responsive)</span>
+                     <span class="openlink">link <img src="./images/icons/openlink/2990159.png" alt="link" /></span>
+                  </a>
+               </li>
+               <li>
+                  <a class="webLink" href="https://hustle2live.github.io/Landings/space" target="_blank">
+                     <span class="unclickable"> Space Research center (responsive)</span>
+                     <span class="openlink">link <img src="./images/icons/openlink/2990159.png" alt="link" /></span>
+                  </a>
+               </li>
+            </ol>
+
+            <br />
+            <hr />
+            <h4>Contacts:</h4>
+
+            <div class="icon-container">
+               <a class="icon-link" href="https://github.com/hustle2live" target="_blank">
+                  <img
+                     src="./images/icons/social/github.ico"
+                     alt="github"
+                     title="view my github page"
+                     width="24"
+                     height="24"
+                  />
+               </a>
+               <a class="icon-link" href="https://github.com/hustle2live" target="_blank">
+                  <img
+                     src="./images/icons/social/facebook-circle.png"
+                     alt="telegram"
+                     title="view my facebook page"
+                     width="24"
+                     height="24"
+                  />
+               </a>
+               <a class="icon-link" href="https://github.com/hustle2live" target="_blank">
+                  <img
+                     src="./images/icons/social/telegram-circle.png"
+                     alt="telegram"
+                     title="write me to telegram"
+                     width="24"
+                     height="24"
+                  />
+               </a>
+            </div>
+         </div>
+
+         <div class="website-preview">
+            <div class="icons">
+               <img class="btn-responce desktop" src="./images/icons/desktop-svgrepo-com.svg" alt="desktop" />
+               <img class="btn-responce mobile active" src="./images/icons/mobile-alt-1-svgrepo-com.svg" alt="mobile" />
+            </div>
+            <iframe title="preview wrapper" src="./images/background/1x1.png"></iframe>
+         </div>
+      </div>
+      <script>
+         const [bgOne, bgTwo, bgThree] = [
+            './images/background/1.jpg',
+            './images/background/2.jpg',
+            './images/background/6.jpg'
+         ];
+         const framePathDefault = bgTwo;
+         const allWebLinks = Array.from(document.querySelectorAll('.webLink'));
+         const previewContainer = document.querySelector('.website-preview iframe');
+         const previewButtonsAll = Array.from(document.querySelectorAll('.btn-responce'));
+         const iframe = document.querySelector('.website-preview > iframe');
+
+         const mobStyles = { width: '450px', height: '119%', transform: 'scale(calc(384 / 450))' };
+         const deskStyles = { width: '1920px', height: '500%', transform: 'scale(calc(1 / 5))' };
+
+         allWebLinks.forEach((link) => {
+            link.addEventListener('mouseover', function () {
+               try {
+                  previewContainer.setAttribute('src', this.href);
+               } catch (error) {
+                  previewContainer.setAttribute('src', framePathDefault);
+               }
+            });
+            link.addEventListener('click', function (e) {
+               window.open(this.href, '_blank');
+               e.stopPropagation();
+            });
+         });
+
+         document.querySelector('.content').addEventListener('click', () => {
+            previewContainer.setAttribute('src', '');
+         });
+
+         previewButtonsAll.forEach((btn) => {
+            btn.addEventListener('click', (e) => {
+               for (const button of previewButtonsAll) {
+                  button.classList.remove('active');
+               }
+               e.currentTarget.classList.add('active');
+
+               const isMobile = e.currentTarget.classList.contains('mobile');
+               if (isMobile) {
+                  Object.assign(iframe.style, mobStyles);
+               } else {
+                  Object.assign(iframe.style, deskStyles);
+               }
+
+               e.stopPropagation();
+            });
+         });
+
+         const background = document.querySelector('.background');
+
+         let position = 0;
+         const speed = 0.5;
+
+         function animateBackground() {
+            position -= speed;
+            background.style.backgroundPosition = `center ${position}px`;
+            requestAnimationFrame(animateBackground);
+         }
+      </script>
+   </body>
+</html>
