@@ -293,6 +293,8 @@ a {
   display: block;
   height: 100%;
   width: 55px;
+  padding: 6px;
+  box-sizing: border-box;
 }
 
 .icon-container {
