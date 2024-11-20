@@ -1,0 +1,225 @@
+@use '../scss/mixins';
+
+.title {
+   font-weight: bold;
+   color: #ffffff;
+}
+
+.stack {
+   font-family: 'Schoolbell', sans-serif;
+   font-size: 16px;
+}
+
+.name {
+   text-decoration: 1px underline;
+   background: linear-gradient(white, orange);
+   -webkit-background-clip: text;
+   background-clip: text;
+   -webkit-text-fill-color: transparent;
+
+   font-family: 'Schoolbell', sans-serif;
+   font-size: 26px;
+}
+
+p {
+   margin: 4px 0;
+}
+
+li {
+   margin: 10px 0;
+}
+
+a {
+   font-weight: 700;
+}
+
+.icon-text {
+   background-color: white;
+   color: rgb(13, 48, 94);
+}
+
+.icon-link img {
+   border-radius: 50%;
+}
+
+.webLink.orange {
+   color: orange;
+}
+.webLink.orange:hover {
+   color: rgb(253, 185, 59);
+}
+.webLink a,
+.webLink {
+   color: rgb(62, 127, 201);
+}
+
+.webLink a:hover,
+.webLink:hover {
+   color: rgb(82, 145, 218);
+}
+
+.content {
+   display: flex;
+   flex-wrap: wrap;
+   position: fixed;
+   justify-content: space-around;
+   top: 2.5vh;
+   left: 2.5vw;
+   height: 95vh;
+   max-height: 95vh;
+   overflow: scroll;
+   width: 95vw;
+   gap: 5%;
+   box-sizing: border-box;
+   background: transparent;
+   padding: 4vw;
+   backdrop-filter: blur(100px);
+   scrollbar-width: none;
+   scroll-behavior: smooth;
+}
+
+.main {
+   width: 55%;
+}
+
+.website-preview {
+   display: flex;
+   flex-direction: column;
+   align-items: baseline;
+   justify-content: flex-start;
+   padding: 0;
+   margin: 0;
+   width: 384px;
+   height: 100%;
+}
+
+.website-preview,
+.website-preview > iframe {
+   border: 4px solid;
+   border-color: rgba(255, 255, 255, 0.15);
+}
+
+.website-preview > iframe {
+   overflow: hidden;
+   box-sizing: border-box;
+   transform-origin: 0 0;
+
+   border-color: transparent;
+   display: block;
+   position: static;
+   height: auto;
+
+   width: 1920px;
+   min-height: calc(1920 / 384 * 100% - 5 * 71px);
+   transform: scale(calc(384 / 1920));
+   // xs size: scale(calc(340 / 1920))
+
+   &.mobile {
+      width: 450px;
+      min-height: calc(450 / 384 * 100% - 84px);
+      transform: scale(calc(384 / 450));
+      // xs size: scale(calc(340 / 400))
+   }
+}
+
+.website-preview > div.icons {
+   height: 60px;
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   border-bottom: 4px solid rgba(255, 255, 255, 0.15);
+   margin: 0;
+   padding: 6px 0;
+   gap: 10px;
+   cursor: pointer;
+}
+
+.btn-responce.active {
+   background: #e9e9e9;
+}
+
+.btn-responce {
+   display: block;
+   height: 100%;
+   width: 55px;
+}
+
+.icon-container {
+   display: flex;
+   gap: 10px;
+}
+
+.webLink img {
+   max-height: 18px;
+}
+
+.unclickable {
+   pointer-events: none;
+   text-decoration: none;
+}
+
+.background {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-image: url('@images/background/6.jpg');
+   background-image: url('@images/background/2.jpg');
+   background-image: url('@images/background/1.jpg');
+   background-size: cover;
+   background-repeat: repeat-y;
+   background-position: center 0;
+   animation: scrollBackground 70s linear infinite;
+}
+
+@include mixins.viewport-lg {
+   .main {
+      width: 45%;
+   }
+   .content {
+      justify-content: space-between;
+   }
+}
+
+@include mixins.viewport-md {
+   .main {
+      width: auto;
+   }
+   .website-preview {
+      max-height: 100vh;
+      margin: 0 -10px;
+      align-items: flex-start;
+      justify-content: flex-start;
+   }
+   .name {
+      display: block;
+      margin-left: 5%;
+      width: fit-content;
+   }
+}
+
+@include mixins.viewport-sm {
+   .content {
+      justify-content: center;
+   }
+
+   .website-preview {
+      width: 340px;
+      height: 100%;
+      border: 0;
+      margin-left: -25px;
+      margin-right: -25px;
+   }
+   .website-preview > iframe {
+      width: 1920px;
+      min-height: calc(1920 / 340 * 100% - 5 * 71px);
+      transform: scale(calc(340 / 1920));
+
+      &.mobile {
+         width: 400px;
+         min-height: calc(400 / 340 * 100% - 84px);
+         transform: scale(calc(340 / 400));
+      }
+   }
+}

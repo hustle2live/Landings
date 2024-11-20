@@ -1,119 +1,33 @@
 @use 'mixins';
 
 html {
-   font-size: 8px;
    scroll-behavior: smooth;
+   scrollbar-width: none;
+   font-family: 'Montserrat', sans-serif;
+   font-size: 15px;
+
+   @include mixins.viewport-sm {
+      font-size: 16px;
+   }
    @include mixins.viewport-md {
-      font-size: 10px;
+      font-size: 18px;
    }
-   @include mixins.viewport-xl {
-      font-size: 12px;
-   }
-   @include mixins.viewport-xxl {
-      font-size: 14px;
+   @include mixins.viewport-lg {
+      font-size: 20px;
    }
 }
 
-.dark {
-   color-scheme: dark;
-}
-
-.red {
-   color: red !important;
-}
-
-.green {
-   color: green !important;
-}
-
-.inline {
-   font-size: inherit;
-   display: inline;
-}
-
-.colored {
-   color: var(--primary-container);
-}
-
-.inclined {
-   transform: rotate(-5deg);
+html,
+body {
+   margin: 0;
+   padding: 0;
+   overflow: hidden;
+   height: 100vh;
 }
 
 body {
-   font-family: 'Montserrat', sans-serif;
-   background: var(--surface);
-   transition: background 0.2s ease, color 0.2s ease;
-}
-
-.container {
-   margin: 0;
-}
-
-body,
-p,
-button,
-a,
-li {
-   font-size: 4.06vw;
-
-   @include mixins.viewport-md {
-      font-size: 2.465vw;
-   }
-   @include mixins.viewport-lg {
-      font-size: 1.823vw;
-   }
-   @include mixins.viewport-xl {
-      font-size: 1.25rem;
-   }
-   @include mixins.viewport-xxl {
-      font-size: 1.25vw;
-   }
-}
-
-strong,
-b {
-   font-weight: 600;
-}
-
-strong:not(.colored) {
-   opacity: 0.8;
-   color: var(--inverse-surface);
-}
-
-s {
-   text-decoration: line-through;
-}
-
-h1,
-h2,
-h3,
-.title,
-.section__title_title {
-   font-family: 'Montserrat', sans-serif;
-   color: var(--on-surface-variant);
-
-   font-size: 6.1vw;
-   font-weight: 500;
-
-   @include mixins.viewport-md {
-      font-size: 3.63vw;
-   }
-
-   @include mixins.viewport-xxl {
-      font-size: 3.73vw;
-   }
-}
-
-a {
-   text-decoration: none;
-}
-
-button,
-a {
-   cursor: pointer;
-}
-
-button:disabled {
-   background: gray !important;
-   pointer-events: none !important;
+   display: block;
+   position: relative;
+   background: #e9e9e9;
+   color: #e9e9e9;
 }

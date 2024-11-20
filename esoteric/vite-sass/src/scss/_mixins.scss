@@ -1,31 +1,18 @@
-@mixin viewport-md {
-   @media (min-width: 480px) {
-      @content;
-   }
-}
 @mixin viewport-lg {
-   @media (min-width: 768px) {
-      @content;
-   }
-}
-@mixin viewport-lg-med {
-   @media (min-width: 991px) {
-      @content;
-   }
-}
-@mixin viewport-xl {
-   @media (min-width: 1024px) {
-      @content;
-   }
-}
-@mixin viewport-xxl {
-   @media (min-width: 1280px) {
+   @media (max-width: 1200px) {
       @content;
    }
 }
 
-@mixin text-gradient {
-   background: var(--hero-name-background);
-   background-clip: text;
-   color: transparent;
+@mixin viewport-md {
+   @media (max-width: 768px) {
+      @content;
+   }
 }
+
+@mixin viewport-sm {
+   @media (max-width: 424px) {
+      @content;
+   }
+}
+

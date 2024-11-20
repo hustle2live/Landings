@@ -44,7 +44,8 @@ export default defineConfig({
    resolve: {
       alias: {
          '@': path.resolve(__dirname, './src'),
-         '@images': path.resolve(__dirname, './src/assets/images')
+         '@images': path.resolve(__dirname, './src/assets/images'),
+         '@fonts': path.resolve(__dirname, './src/assets/fonts')
       }
    },
    plugins: [
@@ -67,9 +68,9 @@ export default defineConfig({
          webp: {
             quality: 100
          }
-      }),
-      imageminOptimize(),
-      imageminOptimizeBuild()
+      })
+      // imageminOptimize(),
+      // imageminOptimizeBuild()
    ],
    root: 'src',
    base: '',
