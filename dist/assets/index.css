@@ -307,6 +307,7 @@ a {
 
 .webLink img {
   max-height: 18px;
+  pointer-events: none;
 }
 
 .unclickable {
