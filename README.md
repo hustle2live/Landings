@@ -28,10 +28,10 @@
    <a class="icon-link" href="https://github.com/hustle2live" target="_blank" style="text-decoration:none">
    <img src="./dist/assets/github.ico" alt="github" title="view my github page" width="24" height="24">
    </a>
-   <a class="icon-link" href="https://github.com/hustle2live" target="_blank" style="text-decoration:none">
+   <a class="icon-link" href="https://www.facebook.com/kuz.v91" target="_blank" style="text-decoration:none">
    <img src="./dist/assets/facebook-circle.png" alt="telegram" title="view my facebook page" width="24" height="24">
    </a>
-   <a class="icon-link" href="https://github.com/hustle2live" target="_blank" style="text-decoration:none">
+   <a class="icon-link" href="https://t.me/vkuznetsov28" target="_blank" style="text-decoration:none">
    <img src="./dist/assets/telegram-circle.png" alt="telegram" title="write me to telegram" width="24" height="24">
    </a>
 </div>
