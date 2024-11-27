@@ -40,7 +40,7 @@
   }
 })();
 const style = "";
-const framePathDefault = "./assets/preview-1.png";
+const framePathDefault = "./dist/assets/preview-1.png";
 const allWebLinks = Array.from(document.querySelectorAll(".webLink"));
 const iframe = document.querySelector(".website-preview > iframe");
 const previewButtonsAll = Array.from(document.querySelectorAll(".btn-responce"));
@@ -79,7 +79,7 @@ function revizorGetLink() {
   ];
   const previewScreen = document.querySelector(".website-preview iframe").clientWidth;
   let pictureSize;
-  const sourcePath = "./assets/";
+  const sourcePath = "./dist/assets/";
   switch (true) {
     case previewScreen < 425:
       pictureSize = xsMobile;
