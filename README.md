@@ -2,15 +2,29 @@
 
 ##
 
-<span class="title">Stack:</span> <span class="icon-text">`JavaScript, HTML5/CSS3, SASS/SCSS, Gulp, Vite, Telegram API, Observer JS, BEM, Google Material Web`</span>
-
-#### <span class="title">Projects:</span>
+#### <span class="title">Commercial Projects:</span>
 
 1. [Taro course ](https://taro-kliuchsveta.com/)(responsive)
 
 2. [HVAC Services ](https://argo-e.com.ua/)(responsive)
 
 3. [CAR selection Services ](https://www.revizoravto.com.ua/)(responsive)
+
+<span class="title">Stack:</span> <span class="icon-text">`JavaScript, HTML/CSS/SCSS, Gulp/Vite, Telegram API, Swiper, Observer, BEM, Material Web`</span>
+
+##
+
+#### <span class="title">Other Apps (FrontEnd / FullStack)</span> (Non-commercial practice):
+
+1. [Movie app ](https://master--beautiful-cassata-3d99f8.netlify.app/) <span>...... [ REST API, JSON, TMDB API, JavaScript, Typescript, Vite]</span>
+
+2. [Booking Travel App ](https://master--bookings-react.netlify.app/) <span>...... [ Redux Toolkit with AsyncThunk, React, Typescript, REST API ]</span>
+
+3. [Messenger with auto-response ](https://mongo-react-app.vercel.app/) <span>...... [ Node.js, Express, MongoDB(Atlas), Socket.io, React, Redux, SCSS ]</span>
+
+4. [Full-Stack Todo List ](https://reactive-gtd.netlify.app/) <span>... [ Node, Express, PostgreSQL, JWT, Passport, JOI, Nodemailer, React+Typescript, Zuztand, Prisma ORM ]</span>
+
+##
 
 #### <span class="title">Landing Pages</span> (Non-commercial practice):
 
