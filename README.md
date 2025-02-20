@@ -4,37 +4,39 @@
 
 #### <span class="title">Commercial Projects:</span>
 
-1. [Taro course ](https://taro-kliuchsveta.com/)(responsive)
+1. [Tarot Rider Waite ](https://taro-kliuchsveta.com/riderwaite/)(responsive)
 
 2. [HVAC Services ](https://argo-e.com.ua/)(responsive)
 
-3. [CAR selection Services ](https://www.revizoravto.com.ua/)(responsive)
+3. [Tarot Online-Intensive ](https://taro-kliuchsveta.com/)(responsive)
 
-<span class="title">Stack:</span> <span class="icon-text">`JavaScript, HTML/CSS/SCSS, Gulp/Vite, Telegram API, Swiper, Observer, BEM, Material Web`</span>
+4. [CAR selection Services ](https://www.revizoravto.com.ua/)(responsive)
+
+<span class="title">Stack:</span> <span class="icon-text">`JavaScript, React, HTML/CSS/SCSS, Gulp/Vite/Next.js, Telegram API, Swiper, Observer, BEM, Material Web`</span>
 
 ##
 
 #### <span class="title">Other Apps (FrontEnd / FullStack)</span> (Non-commercial practice):
 
-1. [Movie app ](https://master--beautiful-cassata-3d99f8.netlify.app/) <span>...... [ REST API, JSON, TMDB API, JavaScript, Typescript, Vite]</span>
+5. [Movie app ](https://master--beautiful-cassata-3d99f8.netlify.app/) <span>...... [ REST API, JSON, TMDB API, JavaScript, Typescript, Vite]</span>
 
-2. [Booking Travel App ](https://master--bookings-react.netlify.app/) <span>...... [ Redux Toolkit with AsyncThunk, React, Typescript, REST API ]</span>
+6. [Booking Travel App ](https://master--bookings-react.netlify.app/) <span>...... [ Redux Toolkit with AsyncThunk, React, Typescript, REST API ]</span>
 
-3. [Messenger with auto-response ](https://mongo-react-app.vercel.app/) <span>...... [ Node.js, Express, MongoDB(Atlas), Socket.io, React, Redux, SCSS ]</span>
+7. [Messenger with auto-response ](https://mongo-react-app.vercel.app/) <span>...... [ Node.js, Express, MongoDB(Atlas), Socket.io, React, Redux, SCSS ]</span>
 
-4. [Full-Stack Todo List ](https://reactive-gtd.netlify.app/) <span>... [ Node, Express, PostgreSQL, JWT, Passport, JOI, Nodemailer, React+Typescript, Zuztand, Prisma ORM ]</span>
+8. [Full-Stack Todo List ](https://reactive-gtd.netlify.app/) <span>... [ Node, Express, PostgreSQL, JWT, Passport, JOI, Nodemailer, React+Typescript, Zuztand, Prisma ORM ]</span>
 
 ##
 
 #### <span class="title">Landing Pages</span> (Non-commercial practice):
 
-1. [Catadamy ](https://cat-landing.netlify.app/)(responsive)
+9. [Catadamy ](https://cat-landing.netlify.app/)(responsive)
 
-2. [IPTV Services ](https://hustle2live.github.io/Landings/cinema)(mobile only)
+10. [IPTV Services ](https://hustle2live.github.io/Landings/cinema)(mobile only)
 
-3. [Accounting ](https://hustle2live.github.io/Landings/accounting)(responsive)
+11. [Accounting ](https://hustle2live.github.io/Landings/accounting)(responsive)
 
-4. [Space Research center ](https://hustle2live.github.io/Landings/space)(responsive)
+12. [Space Research center ](https://hustle2live.github.io/Landings/space)(responsive)
 
 ##
 
